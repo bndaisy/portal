@@ -1,0 +1,53 @@
+.header
+    &__header-top
+        background-color: $palette__primary
+        display: flex
+        justify-content: center
+
+.header-top
+    .container
+        display: grid
+        grid-template-columns: minmax(min-content, max-content) 1fr minmax(min-content, max-content) minmax(min-content, max-content)
+        grid-template-areas: 'logo . social user-nav'
+        column-gap: $gutter
+        width: 100%
+        padding: 0.5rem 0
+
+    &__logo
+        grid-area: logo
+    .logo
+        &__img
+            max-width: 240px
+
+    &__social
+        grid-area: social
+        display: flex
+    .social
+        &__link
+            align-self: center
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 0.5rem
+            padding: 0.5rem
+            border: 1px solid $palette__background
+            border-radius: 50%
+            transition: $fast
+            &:hover
+                background: $palette__background
+                .icon
+                    fill: $palette__primary
+
+    &__user-nav
+        grid-area: user-nav
+        display: flex
+        align-items: center
+    .user-nav
+        &__link
+            padding: 0 0.5rem
+            +textline($palette__background, $headline, $font-bold,uppercase)
+            transition: $fast
+            &:hover
+                color: $palette__secondary-accent
+        &__dropdown
+            display: none

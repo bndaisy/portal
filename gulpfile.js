@@ -14,31 +14,32 @@ const pug = require('gulp-pug');
 //JavaScript
 const uglify = require('gulp-uglify');
 
-
+// Image
+const imagemin = require('gulp-imagemin');
 
 //Functions
 
 function styles(){
     return gulp
-      .src("./public/sass/main.sass")
+      .src('./public/sass/main.sass')
       .pipe(
         sass({
-          outputStyle: "expanded"
-        }).on("error", sass.logError)
+          outputStyle: 'expanded'
+        }).on('error', sass.logError)
       )
       .pipe(
         autoprefixer({
-          overrideBrowserslist: ["last 15 versions"],
+          overrideBrowserslist: ['last 15 versions'],
           cascade: false
         })
       )
       .pipe(
         cleanCSS({
-          compatibility: "ie8",
+          compatibility: 'ie8',
           level: 2
         })
       )
-      .pipe(gulp.dest("./build/css"))
+      .pipe(gulp.dest('./build/css'))
       .pipe(browserSync.stream());
                 
 }
@@ -54,14 +55,21 @@ function scripts(){
 
 function html(){
     return gulp
-      .src("./public/pug/**/*.pug")
+      .src(['./public/pug/**/*.pug', '!./public/pug/components/*.pug', '!./public/pug/layout/*.pug', '!./public/pug/templates/*.pug'])
       .pipe(
         pug({
           pretty: "\t"
         })
       )
-      .pipe(gulp.dest("./build"))
+      .pipe(gulp.dest('./build'))
       .pipe(browserSync.stream());
+}
+
+function images(){
+  return gulp
+        .src('./public/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./build/img'));
 }
 
 function watch(){
@@ -70,6 +78,7 @@ function watch(){
             baseDir: './build'
         }
     });
+    gulp.watch('./public/img/*', images);
     gulp.watch('./public/sass/**/*.sass', styles);
     gulp.watch('./public/js/**/*.js', scripts);
     gulp.watch('./public/pug/**/*.pug', html);
@@ -83,9 +92,5 @@ function clean(){
 // Tasks
 
 gulp.task('watch', watch);
-
-gulp.task('build', gulp.series(clean,
-                    gulp.parallel(styles, scripts, html)
-                    ));
-
-gulp.task('dev', gulp.series('build', 'watch'));
+gulp.task('clean', clean);
+gulp.task('build', gulp.series(images, styles, scripts, html));

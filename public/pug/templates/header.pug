@@ -1,0 +1,42 @@
+include ../components/icon
+
+mixin header(path)
+    header.header
+        .header-top.header__header-top
+            .container
+                picture.logo.header-top__logo
+                    source(srcset='' + path + 'img/logo/logo_horizontal_white.png', media='(min-width: 768px)')
+                    source(srcset='' + path + 'img/logo/logo_mobile_white.png', media='(max-width: 768px)')
+                    img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt="Logo")
+                .social.header-top__social
+                    a.social__link(href='#')
+                        +icon('/', 'icon--ig', 'ig')
+                    a.social__link(href='#')
+                        +icon('/', 'icon--vk', 'vk')
+                    a.social__link(href='#')
+                        +icon('/', 'icon--fb', 'fb')
+                .user-nav.header-top__user-nav
+                    a.user-nav__link(href='#') Личный кабинет
+                    .dropdown.user-nav__dropdown
+                        a.dropdown__link Выход
+
+        .header-bottom.header__header-bottom
+            .container
+                nav.nav.header-bottom__nav
+                    ul.nav__list
+                        li.nav__item
+                            a.nav__link(href='#') База знаний
+                        li.nav__item
+                            a.nav__link(href='#') Новости
+                        li.nav__item
+                            a.nav__link(href='#') Документы
+                        li.nav__item
+                            a.nav__link(href='#') Наша команда
+                            .dropdown.nav__dropdown
+                                ul.dropdown__list
+                                    li.dropdown__item
+                                        a.dropdown__link(href='#') Адреса отделов
+                                    li.dropdown__item
+                                        a.dropdown__link(href='#') Новые струдники
+                                    li.dropdown__item
+                                        a.dropdown__link(href='#') Дни рождения
