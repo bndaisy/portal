@@ -12,7 +12,7 @@ const sass = require('gulp-sass'),
 const pug = require('gulp-pug');
 
 //JavaScript
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es');
 
 // Image
 const imagemin = require('gulp-imagemin');
@@ -46,10 +46,7 @@ function styles(){
 
 function scripts(){
     return gulp.src('./public/js/**/*.js')
-                .pipe(uglify({
-                    topLevel: true
-                }))
-                
+                .pipe(uglify())
                 .pipe(gulp.dest('./build/js'))
 }
 
