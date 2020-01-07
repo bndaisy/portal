@@ -10,15 +10,17 @@ mixin header(path)
                     img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt="Logo")
                 .social.header-top__social
                     a.social__link(href='#')
-                        +icon('/', 'icon--ig', 'ig')
+                        +icon('/', 'ig')
                     a.social__link(href='#')
-                        +icon('/', 'icon--vk', 'vk')
+                        +icon('/', 'vk')
                     a.social__link(href='#')
-                        +icon('/', 'icon--fb', 'fb')
+                        +icon('/', 'fb')
                 .user-nav.header-top__user-nav
                     a.user-nav__link(href='#') Личный кабинет
                     .dropdown.user-nav__dropdown
                         a.dropdown__link Выход
+                .sandwich.header-top__sandwich
+                    .sandwich__line
 
         .header-bottom.header__header-bottom
             .container
