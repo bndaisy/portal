@@ -6,6 +6,10 @@
     &__header-bottom
         background-color: $palette__background
         min-height: 2.1875rem
+        display: none
+        padding: 0.5rem 0
+        &.is-active
+            display: block
 
 .header-top
     .container
@@ -81,7 +85,11 @@
         .container
             padding: 0.5rem 1rem
 
-@media all and (min-width: 1024px)    
+@media all and (min-width: 1024px)
+    .header
+        &__header-bottom
+            display: block
+            padding: 0    
     .header-top
         .container
             grid-template-areas: 'logo . social user-nav'
