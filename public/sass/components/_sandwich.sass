@@ -1,39 +1,31 @@
-.header-top
-    &__sandwich
-        position: relative
-        grid-area: sandwich
+.sandwich
+    &__line
+        position: absolute
         width: 2rem
-        height: 2rem
-        display: none
-        align-items: center
-    .sandwich
-        &__line
+        height: 2px
+        background-color: $palette__background
+        &::before
+            content: ''
             position: absolute
             width: 2rem
             height: 2px
             background-color: $palette__background
-            &::before
-                content: ''
-                position: absolute
-                width: 2rem
-                height: 2px
-                background-color: $palette__background
-                top: -0.5rem
-                transition: $fast
-            &::after
-                content: ''
-                position: absolute
-                width: 2rem
-                height: 2px
-                background-color: $palette__background
-                top: 0.5rem
-                transition: $fast
-        &.is-active
-            .sandwich__line
-                background: transparent
-            .sandwich__line::after
-                transform: rotate(-45deg)
-                top: 0
-            .sandwich__line::before
-                transform: rotate(45deg)
-                top: 0
+            top: -0.5rem
+            transition: $fast
+        &::after
+            content: ''
+            position: absolute
+            width: 2rem
+            height: 2px
+            background-color: $palette__background
+            top: 0.5rem
+            transition: $fast
+    &.is-active
+        .sandwich__line
+            background: transparent
+        .sandwich__line::after
+            transform: rotate(-45deg)
+            top: 0
+        .sandwich__line::before
+            transform: rotate(45deg)
+            top: 0

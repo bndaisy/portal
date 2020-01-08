@@ -12,7 +12,7 @@ const sass = require('gulp-sass'),
 const pug = require('gulp-pug');
 
 //JavaScript
-const uglify = require('gulp-uglify-es');
+const uglify = require('gulp-uglify-es').default;
 
 // Image
 const imagemin = require('gulp-imagemin');
@@ -21,45 +21,46 @@ const imagemin = require('gulp-imagemin');
 
 function styles(){
     return gulp
-      .src('./public/sass/main.sass')
-      .pipe(
-        sass({
-          outputStyle: 'expanded'
-        }).on('error', sass.logError)
-      )
-      .pipe(
-        autoprefixer({
-          overrideBrowserslist: ['last 15 versions'],
-          cascade: false
-        })
-      )
-      .pipe(
-        cleanCSS({
-          compatibility: 'ie8',
-          level: 2
-        })
-      )
-      .pipe(gulp.dest('./build/css'))
-      .pipe(browserSync.stream());
+		.src('./public/sass/main.sass')
+		.pipe(
+			sass({
+			outputStyle: 'expanded'
+			}).on('error', sass.logError)
+		)
+		.pipe(
+			autoprefixer({
+			overrideBrowserslist: ['last 15 versions'],
+			cascade: false
+			})
+		)
+		.pipe(
+			cleanCSS({
+			compatibility: 'ie8',
+			level: 2
+			})
+		)
+		.pipe(gulp.dest('./build/css'))
+		.pipe(browserSync.stream());
                 
 }
 
 function scripts(){
-    return gulp.src('./public/js/**/*.js')
-                .pipe(uglify())
-                .pipe(gulp.dest('./build/js'))
+    return gulp
+			.src('./public/js/**/*.js')
+			.pipe(uglify())
+			.pipe(gulp.dest('./build/js'))
 }
 
 function html(){
     return gulp
-      .src(['./public/pug/**/*.pug', '!./public/pug/components/*.pug', '!./public/pug/layout/*.pug', '!./public/pug/templates/*.pug'])
-      .pipe(
-        pug({
-          pretty: "\t"
-        })
-      )
-      .pipe(gulp.dest('./build'))
-      .pipe(browserSync.stream());
+		.src(['./public/pug/**/*.pug', '!./public/pug/components/*.pug', '!./public/pug/layout/*.pug', '!./public/pug/templates/*.pug'])
+		.pipe(
+			pug({
+			pretty: "\t"
+			})
+		)
+		.pipe(gulp.dest('./build'))
+		.pipe(browserSync.stream());
 }
 
 function images(){
