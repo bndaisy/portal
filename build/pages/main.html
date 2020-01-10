@@ -6,6 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<title>Портал Моя работа</title>
 		<link rel="stylesheet" href="../css/main.css"/>
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+		<!-- Slick slider CDN-->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+		<!-- Select2 CDN-->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css"/>
 	</head>
 	<body id="main">
 		<header class="header">
@@ -48,12 +55,117 @@
 								</ul>
 							</div>
 						</li>
+						<div class="nav__substrate"></div>
 						<li class="nav__item is-hidden"><a class="nav__link" href="#">Выход </a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<main class="main"></main>
+		<main class="main main--align-content">
+			<div class="container">
+				<form class="search main__search">
+					<h2 class="search__headline">Найти сотрудника</h2>
+					<label class="search__label" for="initial">Ф.И.О</label>
+					<input class="search__input" type="text" id="initial"/>
+					<label class="search__label">Подразделение</label>
+					<select class="search__select">
+						<option value="Все">Все</option>
+						<option value="">ОЭАС</option>
+						<option value="">ОМТС</option>
+					</select>
+					<button class="btn btn--search">Искать</button>
+				</form>
+				<figure class="news main__news"><a class="news__wrapper" href="#"><img class="news__img" src="../img/news/prev/news__prev.jpg" alt="News__prev"/>
+						<h2 class="news__headline">Новости</h2>
+						<figcaption class="news__content">
+							<time class="news__date" datetime="#">24</time>
+							<time class="news__month" datetime="#">мая</time>
+							<h3 class="news__title">Топ-10 вопросов собеседования</h3>
+							<p class="news__description">Собеседование с работодателем по праву можно считать самым трудным и ответственным этапом в процессе поиска работы</p>
+						</figcaption></a></figure>
+				<article class="selfhelp main__selfhelp">
+					<h2 class="selfhelp__headline">В помощь соискателям</h2><img class="selfhelp__img" src="../img/stub/no-img.jpg" alt="Away"/>
+					<nav class="nav selfhelp__nav">
+						<ul class="nav__list">
+							<li class="nav__item"><a class="nav__link" href="#"> 
+									<svg class="icon icon--search">
+										<use xlink:href="../svg/sprite.svg#search"></use>
+									</svg><span class="nav__textline">Вакансии</span></a></li>
+							<li class="nav__item"><a class="nav__link" href="#">
+									<svg class="icon icon--bell">
+										<use xlink:href="../svg/sprite.svg#bell"></use>
+									</svg><span class="nav__textline">Профобучение</span></a></li>
+							<li class="nav__item"><a class="nav__link" href="#">
+									<svg class="icon icon--check">
+										<use xlink:href="../svg/sprite.svg#check"></use>
+									</svg><span class="nav__textline">Тестирование</span></a></li>
+							<li class="nav__item"><a class="nav__link" href="#">
+									<svg class="icon icon--user">
+										<use xlink:href="../svg/sprite.svg#user"></use>
+									</svg><span class="nav__textline">Тренинги</span></a></li>
+						</ul>
+					</nav>
+					<div class="features selfhelp__features">      
+						<div class="features__item"><a class="features__link" href="#"> 
+								<svg class="icon icon--destroy">
+									<use xlink:href="../svg/sprite.svg#destroy"></use>
+								</svg><span class="features__textline">Трудоустройство инвалидов</span></a></div>
+						<div class="features__item"><a class="features__link" href="#">
+								<svg class="icon icon--calendar">
+									<use xlink:href="../svg/sprite.svg#calendar"></use>
+								</svg><span class="features__textline">Календарь мероприятий</span></a></div>
+						<div class="features__item"><a class="features__link" href="#">
+								<svg class="icon icon--important">
+									<use xlink:href="../svg/sprite.svg#important"></use>
+								</svg><span class="features__textline">О рынке труда</span></a></div>
+						<div class="features__item"><a class="features__link" href="#">
+								<svg class="icon icon--search">
+									<use xlink:href="../svg/sprite.svg#search"></use>
+								</svg><span class="features__textline">Самостоятельно найти работу</span></a></div>
+					</div>
+				</article>
+				<article class="important main__important">
+					<h2 class="important__headline">Будь в курсе</h2>
+					<p class="important__description">Вся важная информация о деятельности Центра занятости</p><a class="important__link" href="#">23 мая состоялось совещание с начальниками отделов трудоустройства</a>
+				</article>
+				<article class="new-collegue main__new-collegue"><a class="new-collegue__wrapper" href="#">
+						<h2 class="new-collegue__headline">Новые сотрудники</h2><img class="new-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="new-collegue__initial">Смирнов Олег Дмитриевич</span><span class="new-collegue__position">Начальник отдела материального снабжения</span></a></article>
+				<article class="forum main__forum">
+					<h2 class="forum__headline">Говорите открыто</h2>
+					<p class="forum__description">Площадка для диалога с коллегами, руководством и единомышленниками</p><a class="forum__link" href="#">
+						<svg class="icon icon--message">
+							<use xlink:href="../svg/sprite.svg#message"></use>
+						</svg><span class="forum__textline">18 новых комментариев</span></a>
+				</article>
+				<article class="best-collegue main__best-collegue"><a class="best-collegue__wrapper" href="#">
+						<h2 class="best-collegue__headline">Лучший сотрудник</h2><img class="best-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="best-collegue__initial">Смирнов Олег Дмитриевич</span><span class="best-collegue__achivement">Поздравляем с победой к конкурсе</span></a></article>
+				<figure class="smi main__smi"><a class="smi__wrapper" href="#"><img class="smi__img" src="../img/smi/sob.jpg" alt="Sobyanin"/>
+						<figcaption class="smi__description">Мэр Москвы Сергей Собянин открыл флагманский Центр занятости населения "Моя работа" на ул. Щепкина</figcaption></a></figure>
+				<article class="birth-collegue main__birth-collegue"><a class="birth-collegue__wrapper" href="#">
+						<h2 class="birth-collegue__headline">Поздравляем</h2><img class="birth-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="birth-collegue__initial">Смирнов Олег Дмитриевич</span>
+						<time class="birth-collegue__datetime">27.05</time></a></article>
+				<article class="raiting main__raiting"><a class="raiting__wrapper" href="#">
+						<svg class="icon icon--raiting">
+							<use xlink:href="../svg/sprite.svg#raiting"></use>
+						</svg>
+						<h2 class="raiting__headline">Рейтинг отделов</h2></a></article>
+				<article class="event main__event"><a class="event__wrapper" href="#">
+						<svg class="icon icon--event">
+							<use xlink:href="../svg/sprite.svg#event"></use>
+						</svg>
+						<h2 class="event__headline">Конкурсы</h2></a></article>
+				<article class="course main__course">
+					<h2 class="course__headline">Обучение сотрудников</h2>
+					<p class="course__description">Расписание курсов и мероприятий для сотрудников</p><a class="course__link" href="#">"Искренний сервис", тренинг зал 3, 05.06.2019</a>
+				</article>
+			</div>
+		</main>
 	</body>
 	<script src="../js/main.js"></script>
+	<!-- JQuery CDN-->
+	<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Slick slider CDN-->
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- Select2 CDN-->
+	<script src="//cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 </html>

@@ -1,4 +1,386 @@
 #main
-    background: url('/img/bg-auth.jpg') center no-repeat
+    background: url('/img/bg-auth.jpg') center no-repeat fixed
+    background-size: cover
     width: 100%
     min-height: 100vh
+
+.main
+    &--align-content
+        +flex-center
+    .container
+        display: grid
+        column-gap: $gutter
+        row-gap: $gutter
+        padding: 3rem
+        grid-auto-flow: dense
+        grid-template-columns: repeat(2, 136px)
+        grid-auto-rows: 136px
+
+    &__search
+        background-color: $palette__primary
+        padding: 1rem
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        grid-column: span 2
+        grid-row: span 2
+        position: relative
+        display: flex
+        flex-direction: column
+        z-index: 0
+    
+    .search
+        &__headline
+            +textline($palette__background, $headline, uppercase)
+            margin-bottom: $margin*2.5
+            font-weight: bolder
+
+        &__label
+            +textline($palette__background, $subheadline, none)
+            
+        &__input
+            height: 2rem
+            border: 2px solid $palette__secondary-accent
+            border-radius: $border-radius
+            margin-bottom: $margin
+            padding-left: 0.5rem
+            +textline($palette__secondary, $textline, none)
+
+        &__select
+            height: 2rem
+            border: 2px solid $palette__secondary-accent
+            border-radius: $border-radius
+            padding-left: 0.5rem
+            +textline($palette__secondary, $textline, none)
+
+    &__news
+        grid-column: span 2
+        grid-row: span 4
+        background-color: $palette__background
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        overflow: hidden
+        position: relative
+    .news
+        &__wrapper
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: repeat(2, 1fr) 
+            width: 100%
+            height: 100%
+        &__headline
+            position: absolute
+            top: 1rem
+            left: 1rem
+            +textline($palette__primary, $headline, uppercase)
+            font-weight: bolder
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &__content
+            display: flex
+            flex-direction: column
+            padding: 1rem
+        &__date
+            +textline($palette__secondary, $headline*3, uppercase)
+            line-height: 1
+            font-weight: bolder
+        &__month
+            +textline($palette__secondary, $headline, uppercase)
+            font-weight: bolder
+            margin-bottom: 2rem
+        &__title
+            +textline($palette__primary, $headline, uppercase)
+            font-weight: bolder
+            margin-bottom: $margin/2
+        &__description
+            +textline($palette__primary, $subheadline, none)
+
+
+    &__selfhelp
+        grid-column: span 2
+        grid-row: span 5
+        background-color: rgba($palette__another-dark, 0.8)
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        display: grid
+        width: 100%
+        grid-template-columns: 1fr
+        row-gap: 1rem
+    .selfhelp
+        &__headline
+            +textline($palette__secondary-light, $headline, uppercase)
+            font-weight: bolder
+            margin: 1rem 1rem 0
+        &__img
+            width: 16rem
+            height: 16rem
+            margin: 0 1rem
+            object-fit: cover
+
+        .nav
+            &__list
+                display: flex
+                flex-direction: column
+                width: 100%
+            &__link
+                display: flex
+                align-items: center
+                width: 100%
+                height: 100%
+                padding: 0.4rem 0.875rem
+                border-left: 2px solid transparent
+                +textline($palette__secondary-light, $headline, uppercase)
+        &__features
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            column-gap: 0.5rem
+            row-gap: 0.5rem
+            margin: 0 1rem 1rem
+        .features
+            &__link
+                +flex-center
+                flex-direction: column
+                background-color: rgba($palette__another-dark, 0.8)
+                padding: 1rem 0.5rem
+                width: 100%
+                height: 100%
+                border: 1px solid transparent
+                border-radius: $border-radius
+            &__textline
+                +textline($palette__secondary-light, $subheadline, none)
+                text-align: center
+
+    &__important
+        background-color: $palette__secondary-lighten
+    &__course
+        background-color: $palette__secondary-accent
+    &__important,
+    &__course
+        grid-column: span 2
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        display: flex
+        flex-direction: column
+        padding: 1rem
+    .important,
+    .course
+        &__headline
+            +textline($palette__background, $headline, uppercase)
+            font-weight: bolder
+            margin-bottom: 0.5rem
+        &__description
+            +textline($palette__background, $textline, none)
+            margin-bottom: 0.5rem
+        &__link
+            +textline($palette__background, $textline, none)
+            text-decoration: underline
+
+    &__new-collegue,
+    &__best-collegue,
+    &__birth-collegue
+        grid-column: span 2
+        background-color: $palette__primary-accent
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+    .new-collegue,
+    .best-collegue,
+    .birth-collegue
+        &__wrapper
+            position: relative
+            width: 100%
+            height: 100%
+            padding: 1rem
+            display: grid
+            grid-template-columns: 72px 2fr
+            grid-template-rows: repeat(3, 1fr)
+            column-gap: 1rem
+        &__headline
+            +textline($palette__background, $headline, uppercase)
+            font-weight: bolder
+            grid-area: headline
+        &__img
+            width: 100%
+            height: 72px
+            object-fit: cover
+            grid-area: img
+            border-radius: $border-radius
+            align-self: end
+        &__initial
+            +textline($palette__background, $subheadline, uppercase)
+            font-weight: bolder
+        &__position,
+        &__achivement,
+        &__datetime
+            +textline($palette__background, $textline, none)
+    .new-collegue
+        &__wrapper
+            grid-template-areas: 'headline headline' 'img initial' 'img position'
+        &__position
+                grid-area: position
+    .best-collegue
+        &__wrapper
+            grid-template-areas: 'headline headline' 'img initial' 'img achivement'
+        &__achivement
+            grid-area: achivement
+    .birth-collegue
+        &__wrapper
+            grid-template-areas: 'headline headline' 'img initial' 'img datetime'
+        &__datetime
+            grid-area: datetime
+
+
+    &__forum
+        grid-column: span 2
+        background-color: $palette__secondary-lighten
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 1rem
+    .forum
+        &__headline
+            +textline($palette__background, $headline, uppercase)
+            font-weight: bolder
+        &__description
+            +textline($palette__background, $textline, none)
+        &__link
+            width: 100%
+            display: flex
+            border-top: 1px solid $palette__secondary-darken
+            padding: 0.25rem 0
+            display: flex
+            align-items: center
+        &__textline
+            +textline($palette__secondary-darken, $textline, none)
+            transition: $fast
+
+    &__smi
+        grid-column: span 2
+        grid-row: span 2
+        background-color: $palette__background
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        overflow: hidden
+        position: relative
+    .smi
+        &__wrapper
+            width: 100%
+            height: 100%
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &__description
+            position: absolute
+            left: 0
+            width: 100%
+            padding: 1rem
+            +textline($palette__primary, $textline, none)
+            background-color: $palette__background
+            bottom: -100%
+            transition: all ease-in-out .5s
+    
+    &__raiting,
+    &__event
+        background-color: $palette__secondary-accent
+        border-radius: $border-radius
+        box-shadow: $shadow-lighten
+        transition: $fast
+    .raiting,
+    .event
+        &__wrapper
+            width: 100%
+            height: 100%
+            padding: 1rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+        &__headline
+            +textline($palette__background, $headline, uppercase)
+            font-weight: bolder
+            text-align: center
+
+
+
+@media all and (min-width: 620px)
+    .main
+        .container
+            grid-template-columns: repeat(4, 136px)
+        &__news
+            grid-column: span 4
+            grid-row: span 2
+        .news
+            &__wrapper
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: 1fr
+
+@media all and (min-width: 1024px)
+    .main
+        .container
+            grid-template-columns: repeat(6, 136px)
+            padding: 3rem 0
+        &__news
+            transition: $fast
+            &:hover
+                box-shadow: 5px 5px 10px rgba($palette__secondary-accent, 0.3)
+        .selfhelp
+            .nav
+                &__link
+                    transition: $fast
+                    &:hover
+                        border-left-color: $palette__secondary-light
+                        background-color: rgba($palette__another-dark, 0.8)
+                        color: $palette__background
+            .features
+                &__textline
+                    transition: $fast
+                &__link
+                    transition: $fast
+                    &:hover
+                        background-color: lighten($palette__another-dark, 10%)
+                        border-color: $palette__secondary-light
+                        .features__textline
+                            color: $palette__background
+        .important
+            &__link
+                transition: $fast
+                &:hover
+                    color: $palette__secondary-darken
+        .course
+            &__link
+                transition: $fast
+                &:hover
+                    color: $palette__another-dark
+        .new-collegue,
+        .best-collegue,
+        .birth-collegue
+            transition: $fast
+            &:hover
+                box-shadow: 5px 5px 10px rgba($palette__secondary-accent, 0.3)
+        
+        .forum
+            &__link
+                &:hover
+                    .forum__textline
+                        color: $palette__background
+                    .icon
+                        fill: $palette__background
+        .smi
+            &:hover
+                .smi__description
+                    bottom: 0
+        .raiting,
+        .event
+            &:hover
+                box-shadow: 5px 5px 10px rgba($palette__secondary-accent, 0.3)
+
+        
+@media all and (min-width: 1280px)
+    .main
+        .container
+            grid-template-columns: repeat(8, 136px)
+        

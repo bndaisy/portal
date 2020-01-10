@@ -65,7 +65,7 @@ function html(){
 
 function images(){
   return gulp
-        .src('./public/img/*')
+        .src('./public/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/img'));
 }

@@ -1,0 +1,20 @@
+.btn
+    &--search
+        align-self: self-start
+        position: absolute
+        right: 1rem
+        bottom: 1rem
+        background-color: transparent
+        border: 2px solid $palette__secondary-accent
+        border-radius: $border-radius
+        padding: 0.25rem 1rem
+        +textline($palette__background, $headline, uppercase)
+        font-weight: bolder
+    
+@media all and (min-width: 1024px)
+    .btn
+        &--search
+            transition: $fast
+            &:hover
+                background-color: $palette__secondary-accent
+                cursor: pointer

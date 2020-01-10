@@ -1,15 +1,143 @@
 extends ../layout/head
 include ../templates/header
+include ../components/icon
 
 block title
     title Портал Моя работа
 
 block links
     link(rel='stylesheet', href='../css/main.css')
-
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    // Slick slider CDN
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css')
+    // Select2 CDN
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css')
 block content
     body#main
         +header('/')
-        main.main
-        
+        main.main.main--align-content
+            .container
+
+                form.search.main__search
+                    h2.search__headline Найти сотрудника
+                    label.search__label(for='initial') Ф.И.О
+                    input.search__input(type='text' id='initial')
+                    label.search__label Подразделение
+                    select.search__select
+                        option(value='Все') Все
+                        option(value='') ОЭАС
+                        option(value='') ОМТС
+                    button.btn.btn--search Искать
+
+                figure.news.main__news
+                    a.news__wrapper(href='#')
+                        img(src='../img/news/prev/news__prev.jpg', alt='News__prev').news__img
+                        h2.news__headline Новости
+                        figcaption.news__content
+                            time.news__date(datetime='#') 24
+                            time.news__month(datetime='#') мая
+                            h3.news__title Топ-10 вопросов собеседования
+                            p.news__description Собеседование с работодателем по праву можно считать самым трудным и ответственным этапом в процессе поиска работы
+
+                article.selfhelp.main__selfhelp
+                    h2.selfhelp__headline В помощь соискателям
+                    img.selfhelp__img(src='../img/stub/no-img.jpg', alt='Away')
+                    nav.nav.selfhelp__nav
+                        ul.nav__list
+                            li.nav__item
+                                a.nav__link(href='#') 
+                                    +icon('../', 'search')
+                                    span.nav__textline Вакансии
+                            li.nav__item
+                                a.nav__link(href='#')
+                                    +icon('../', 'bell')
+                                    span.nav__textline Профобучение
+                            li.nav__item
+                                a.nav__link(href='#')
+                                    +icon('../', 'check')
+                                    span.nav__textline Тестирование
+                            li.nav__item
+                                a.nav__link(href='#')
+                                    +icon('../', 'user')
+                                    span.nav__textline Тренинги
+
+                    .features.selfhelp__features       
+                        .features__item
+                            a.features__link(href='#') 
+                                +icon('../', 'destroy')
+                                span.features__textline Трудоустройство инвалидов
+                        .features__item
+                            a.features__link(href='#')
+                                +icon('../', 'calendar')
+                                span.features__textline Календарь мероприятий
+                        .features__item
+                            a.features__link(href='#')
+                                +icon('../', 'important')
+                                span.features__textline О рынке труда
+                        .features__item
+                            a.features__link(href='#')
+                                +icon('../', 'search')
+                                span.features__textline Самостоятельно найти работу
+                    
+                article.important.main__important
+                    h2.important__headline Будь в курсе
+                    p.important__description Вся важная информация о деятельности Центра занятости
+                    a.important__link(href='#') 23 мая состоялось совещание с начальниками отделов трудоустройства
+                
+                article.new-collegue.main__new-collegue
+                    a.new-collegue__wrapper(href='#')
+                        h2.new-collegue__headline Новые сотрудники
+                        img.new-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                        span.new-collegue__initial Смирнов Олег Дмитриевич
+                        span.new-collegue__position Начальник отдела материального снабжения
+
+                article.forum.main__forum
+                    h2.forum__headline Говорите открыто
+                    p.forum__description Площадка для диалога с коллегами, руководством и единомышленниками
+                    a.forum__link(href='#')
+                        +icon('../', 'message')
+                        span.forum__textline 18 новых комментариев
+    
+                article.best-collegue.main__best-collegue
+                    a.best-collegue__wrapper(href='#')
+                        h2.best-collegue__headline Лучший сотрудник
+                        img.best-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                        span.best-collegue__initial Смирнов Олег Дмитриевич
+                        span.best-collegue__achivement Поздравляем с победой к конкурсе
+
+                figure.smi.main__smi
+                    a.smi__wrapper(href='#')
+                        img(src='../img/smi/sob.jpg', alt='Sobyanin').smi__img
+                        figcaption.smi__description Мэр Москвы Сергей Собянин открыл флагманский Центр занятости населения "Моя работа" на ул. Щепкина
+
+                article.birth-collegue.main__birth-collegue
+                    a.birth-collegue__wrapper(href='#')
+                        h2.birth-collegue__headline Поздравляем
+                        img.birth-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                        span.birth-collegue__initial Смирнов Олег Дмитриевич
+                        time.birth-collegue__datetime 27.05
+
+                article.raiting.main__raiting
+                    a.raiting__wrapper(href='#')
+                        +icon('../', 'raiting')
+                        h2.raiting__headline Рейтинг отделов
+
+                article.event.main__event
+                    a.event__wrapper(href='#')
+                        +icon('../', 'event')
+                        h2.event__headline Конкурсы
+
+                article.course.main__course
+                    h2.course__headline Обучение сотрудников
+                    p.course__description Расписание курсов и мероприятий для сотрудников
+                    a.course__link(href='#') "Искренний сервис", тренинг зал 3, 05.06.2019
+
     script(src='../js/main.js')
+    // JQuery CDN
+    script(src='//code.jquery.com/jquery-3.4.1.min.js')
+    // Slick slider CDN
+    script(src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    // Select2 CDN
+    script(src='//cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js')
