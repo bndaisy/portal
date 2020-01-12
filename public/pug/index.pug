@@ -1,4 +1,5 @@
-extends layout/head
+extends layout/head 
+include components/social
 
 block title
     title Авторизация
@@ -7,4 +8,20 @@ block links
     link(rel='stylesheet', href='css/main.css')
 
 block content
-    a(href='pages/main.html') Тык
+    body#auth
+        .alignbox
+            main.auth.auth--align-content
+                picture.logo.auth__logo
+                    source(srcset='img/logo/logo_vertical.png', media='(min-width: 768px)')
+                    source(srcset='img/logo/logo_mobile.png', media='(max-width: 768px)')
+                    img.logo__img(src='img/logo/logo_vertical.png', alt='Logo')
+                +social('auth__social')
+                form.entry.auth__entry(action='pages/main.html')
+                    h1.entry__headline Авторизация
+                    p.error.entry__error Неверный логин или пароль
+                    input.entry__input(type='text', id='login')
+                    label.entry__label(for='login') Логин
+                    input.entry__input(type='password', id='password')
+                    label.entry__label(for='password') Пароль
+                    button.btn.btn--entry Войти
+                    a.entry__forget(href='#') Забыли пароль?

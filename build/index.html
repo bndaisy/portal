@@ -6,5 +6,34 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		<title>Авторизация</title>
 		<link rel="stylesheet" href="css/main.css"/>
-	</head><a href="pages/main.html">Тык</a>
+	</head>
+	<body id="auth">
+		<div class="alignbox">
+			<main class="auth auth--align-content">
+				<picture class="logo auth__logo">
+					<source srcset="img/logo/logo_vertical.png" media="(min-width: 768px)"/>
+					<source srcset="img/logo/logo_mobile.png" media="(max-width: 768px)"/><img class="logo__img" src="img/logo/logo_vertical.png" alt="Logo"/>
+				</picture>
+				<div class="social auth__social"><a class="social__link" href="//www.instagram.com/czn.moyarabota/?igshid=10erac5i2oyhx">
+						<svg class="icon icon--ig">
+							<use xlink:href="/svg/sprite.svg#ig"></use>
+						</svg></a><a class="social__link" href="//vk.com/czn.moyarabota">
+						<svg class="icon icon--vk">
+							<use xlink:href="/svg/sprite.svg#vk"></use>
+						</svg></a><a class="social__link" href="//www.facebook.com/czn.moyarabota/">
+						<svg class="icon icon--fb">
+							<use xlink:href="/svg/sprite.svg#fb"></use>
+						</svg></a></div>
+				<form class="entry auth__entry" action="pages/main.html">
+					<h1 class="entry__headline">Авторизация</h1>
+					<p class="error entry__error">Неверный логин или пароль</p>
+					<input class="entry__input" type="text" id="login"/>
+					<label class="entry__label" for="login">Логин</label>
+					<input class="entry__input" type="password" id="password"/>
+					<label class="entry__label" for="password">Пароль</label>
+					<button class="btn btn--entry">Войти</button><a class="entry__forget" href="#">Забыли пароль?</a>
+				</form>
+			</main>
+		</div>
+	</body>
 </html>

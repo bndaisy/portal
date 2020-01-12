@@ -1,21 +1,42 @@
-.social
-    &__link
-        align-self: center
-        display: flex
-        justify-content: center
-        align-items: center
-        padding: 0.5rem
-        border: 1px solid $palette__background
-        border-radius: 50%
-        margin: 0 0.5rem
-
-@media all and (min-width: 1024px)
+.header-top
     .social
         &__link
-            transition: $fast
-            &:hover
-                background-color: $palette__background
-                .icon
-                    fill: $palette__primary
+            align-self: center
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0.5rem
+            border: 1px solid $palette__background
+            border-radius: 50%
+            margin: 0 0.5rem
+.auth
+    .social
+        &__link
+            align-self: center
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0.5rem
+            border: 1px solid $palette__secondary-lighten
+            border-radius: 50%
+            margin: 0 0.5rem
+
+@media all and (min-width: 1024px)
+    .header-top
+        .social
+            &__link
+                transition: $fast
+                &:hover
+                    background-color: $palette__background
+                    .icon
+                        fill: $palette__primary
+    .auth
+        .social
+            &__link
+                transition: $fast
+                &:hover
+                    border-color: $palette__primary
+                    .icon
+                        fill: $palette__primary
     
         

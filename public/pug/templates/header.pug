@@ -1,4 +1,5 @@
 include ../components/icon
+include ../components/social
 
 mixin header(path)
     header.header
@@ -7,14 +8,8 @@ mixin header(path)
                 picture.logo.header-top__logo
                     source(srcset='' + path + 'img/logo/logo_horizontal_white.png', media='(min-width: 1024px)')
                     source(srcset='' + path + 'img/logo/logo_mobile_white.png', media='(max-width: 1024px)')
-                    img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt="Logo")
-                .social.header-top__social
-                    a.social__link(href='#')
-                        +icon('/', 'ig')
-                    a.social__link(href='#')
-                        +icon('/', 'vk')
-                    a.social__link(href='#')
-                        +icon('/', 'fb')
+                    img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt='Logo')
+                +social('header-top__social')
                 .user-nav.header-top__user-nav
                     a.user-nav__link(href='#') Личный кабинет
                     .dropdown.user-nav__dropdown
