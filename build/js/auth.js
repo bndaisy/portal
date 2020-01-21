@@ -1,0 +1,1 @@
+!function(){let e=document.querySelector(".auth__entry"),t=document.querySelector(".auth__recovery"),c=document.querySelector(".entry__forget"),r=document.querySelector(".recovery__back");c.addEventListener("click",()=>{e.classList.remove("is-active"),t.classList.add("is-active")}),r.addEventListener("click",()=>{t.classList.remove("is-active"),e.classList.add("is-active")})}();

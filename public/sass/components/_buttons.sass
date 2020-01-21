@@ -10,15 +10,43 @@
         padding: 0.25rem 1rem
         +textline($palette__background, $headline, uppercase)
         font-weight: bolder
-    &--entry
+    &--primary
         width: 100%
         padding: 0.7rem 0
         background-color: $palette__primary
-        +textline($palette__background, $headline, uppercase)
+        +textline($palette__background, $headline, none)
         font-weight: bolder
         border: none
         border-radius: $border-radius
         margin: 1.5rem 0 1rem
+
+    // &--close
+    //     display: block
+    //     position: absolute
+    //     top: -1.5rem 
+    //     right: -1.5rem
+    //     border: none
+    //     width: 1.5rem
+    //     height: 1.5rem
+    //     background-color: transparent
+    //     &::before
+    //         content: ''
+    //         width: 1.5rem
+    //         height: 2px
+    //         transform: rotate(45deg)
+    //         background-color: $palette__secondary-lighten
+    //         display: block
+    //         position: absolute
+    //         transition: $fast
+    //     &::after
+    //         content: ''
+    //         width: 1.5rem
+    //         height: 2px
+    //         transform: rotate(-45deg)
+    //         position: absolute
+    //         background-color: $palette__secondary-lighten
+    //         display: block
+    //         transition: $fast
 
     
 @media all and (min-width: 1024px)
@@ -28,8 +56,16 @@
             &:hover
                 background-color: $palette__secondary-accent
                 cursor: pointer
-        &--entry
+        &--primary
             transition: $fast
             &:hover
                 background-color: $palette__secondary-accent
                 cursor: pointer
+        // &--close
+        //     transition: $fast
+        //     &:hover
+        //         cursor: pointer
+        //         &::after
+        //            background-color: $palette__primary
+        //         &::before
+        //            background-color: $palette__primary  

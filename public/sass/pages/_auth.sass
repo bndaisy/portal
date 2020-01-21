@@ -16,7 +16,7 @@
         row-gap: 1rem
         grid-template-columns: 17.5rem
         grid-template-rows: auto
-        grid-template-areas: 'logo' 'entry' 'social'
+        grid-template-areas: 'logo' 'main' 'social'
         background-color: $palette__background
         border-radius: $border-radius
         box-shadow: $shadow
@@ -36,13 +36,17 @@
         grid-area: social
         display: flex
         justify-self: center
-    &__entry
-        grid-area: entry
-        display: flex
+    &__entry,
+    &__recovery
+        display: none
+        grid-area: main
         flex-direction: column
         align-items: center
         position: relative
-    .entry
+        &.is-active
+            display: flex
+    .entry,
+    .recovery
         &__headline
             +textline($palette__darken-than-black, $headline*2, none)
             font-weight: bolder
@@ -78,20 +82,30 @@
             &:focus
                 border-color: $palette__secondary-accent
                 &+ label
-                    color: $palette__secondary-accent
-                
+                    color: $palette__primary
+    .entry      
         &__forget
             +textline($palette__primary, $subheadline, none)
+    .recovery
+        &__back
+            +textline($palette__primary, $subheadline, none)
+
+
 
 
 @media all and (min-width: 768px)
     .auth
         &--align-content
             grid-template-columns: repeat(2, 17.5rem)
-            grid-template-areas: 'logo entry' 'social entry'
+            grid-template-areas: 'logo main' 'social main'
             row-gap: 0
         .entry
             &__forget
+                transition: $fast
+                &:hover
+                    color: $palette__secondary-accent
+        .recovery
+            &__back
                 transition: $fast
                 &:hover
                     color: $palette__secondary-accent

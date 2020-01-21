@@ -1,5 +1,5 @@
 ;(function(){
-    let sandwich = document.querySelector('.sandwich');
+    let sandwich = document.querySelector('.sandwich'),
         dropdown = document.querySelector('.header-bottom');
         
         sandwich.addEventListener('touchstart', () => {
