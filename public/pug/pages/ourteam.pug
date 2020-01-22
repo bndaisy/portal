@@ -1,0 +1,20 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/filter
+
+block title
+    title Портал Моя работа - Наша команда
+
+block links
+    link(rel='stylesheet', href='../css/main.css')
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    
+block content
+    body#ourteam
+        +header('/')
+        main.ourteam
+            +filter('ourteam__filter', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
+            .content
+        script(src='../js/main.js')

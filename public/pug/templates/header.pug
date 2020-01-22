@@ -5,10 +5,11 @@ mixin header(path)
     header.header
         .header-top.header__header-top
             .container
-                picture.logo.header-top__logo
-                    source(srcset='' + path + 'img/logo/logo_horizontal_white.png', media='(min-width: 1024px)')
-                    source(srcset='' + path + 'img/logo/logo_mobile_white.png', media='(max-width: 1024px)')
-                    img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt='Logo')
+                a.logo.header-top__logo(href='' + path + 'pages/main.html')
+                    picture
+                        source(srcset='' + path + 'img/logo/logo_horizontal_white.png', media='(min-width: 1024px)')
+                        source(srcset='' + path + 'img/logo/logo_mobile_white.png', media='(max-width: 1024px)')
+                        img.logo__img(src='' + path + 'img/logo/logo_horizontal_white.png', alt='Logo')
                 +social('header-top__social')
                 .user-nav.header-top__user-nav
                     a.user-nav__link(href='#') Личный кабинет
@@ -27,7 +28,7 @@ mixin header(path)
                     li.nav__item
                         a.nav__link(href='#') Документы
                     li.nav__item
-                        a.nav__link(href='#') Наша команда
+                        a.nav__link(href='' + path + 'pages/ourteam.html') Наша команда
                         .dropdown.nav__dropdown
                             ul.dropdown__list
                                 li.dropdown__item

@@ -87,11 +87,20 @@ block content
                     a.important__link(href='#') 23 мая состоялось совещание с начальниками отделов трудоустройства
                 
                 article.new-collegue.main__new-collegue
-                    a.new-collegue__wrapper(href='#')
-                        h2.new-collegue__headline Новые сотрудники
-                        img.new-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
-                        span.new-collegue__initial Смирнов Олег Дмитриевич
-                        span.new-collegue__position Начальник отдела материального снабжения
+                    h2.new-collegue__headline Новые сотрудники
+                    .new-collegue__items
+                        a.new-collegue__wrapper(href='#')
+                            img.new-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.new-collegue__initial Смирнов Олег Дмитриевич
+                            span.new-collegue__position Начальник отдела материального снабжения
+                        a.new-collegue__wrapper(href='#')
+                            img.new-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.new-collegue__initial Смирнов Олег Дмитриевич
+                            span.new-collegue__position Начальник отдела материального снабжения
+                    button.btn.btn--slick-prev
+                        +icon('../', 'chevron-left')
+                    button.btn.btn--slick-next
+                        +icon('../', 'chevron-right')
 
                 article.forum.main__forum
                     h2.forum__headline Говорите открыто
@@ -101,11 +110,20 @@ block content
                         span.forum__textline 18 новых комментариев
     
                 article.best-collegue.main__best-collegue
-                    a.best-collegue__wrapper(href='#')
-                        h2.best-collegue__headline Лучший сотрудник
-                        img.best-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
-                        span.best-collegue__initial Смирнов Олег Дмитриевич
-                        span.best-collegue__achivement Поздравляем с победой к конкурсе
+                    h2.best-collegue__headline Лучший сотрудник
+                    .best-collegue__items
+                        a.best-collegue__wrapper(href='#')
+                            img.best-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.best-collegue__initial Смирнов Олег Дмитриевич
+                            span.best-collegue__achivement Поздравляем с победой к конкурсе
+                        a.best-collegue__wrapper(href='#')
+                            img.best-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.best-collegue__initial Смирнов Олег Дмитриевич
+                            span.best-collegue__achivement Поздравляем с победой к конкурсе
+                    button.btn.btn--slick-prev
+                        +icon('../', 'chevron-left')
+                    button.btn.btn--slick-next
+                        +icon('../', 'chevron-right')
 
                 figure.smi.main__smi
                     a.smi__wrapper(href='#')
@@ -113,11 +131,20 @@ block content
                         figcaption.smi__description Мэр Москвы Сергей Собянин открыл флагманский Центр занятости населения "Моя работа" на ул. Щепкина
 
                 article.birth-collegue.main__birth-collegue
-                    a.birth-collegue__wrapper(href='#')
-                        h2.birth-collegue__headline Поздравляем
-                        img.birth-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
-                        span.birth-collegue__initial Смирнов Олег Дмитриевич
-                        time.birth-collegue__datetime 27.05
+                    h2.birth-collegue__headline Поздравляем
+                    .birth-collegue__items
+                        a.birth-collegue__wrapper(href='#')
+                            img.birth-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.birth-collegue__initial Смирнов Олег Дмитриевич
+                            time.birth-collegue__datetime 27.05
+                        a.birth-collegue__wrapper(href='#')
+                            img.birth-collegue__img(src='../img/stub/no-img.jpg', alt='Away')
+                            span.birth-collegue__initial Смирнов Олег Дмитриевич
+                            time.birth-collegue__datetime 27.05
+                    button.btn.btn--slick-prev
+                        +icon('../', 'chevron-left')
+                    button.btn.btn--slick-next
+                        +icon('../', 'chevron-right')
 
                 article.raiting.main__raiting
                     a.raiting__wrapper(href='#')
@@ -141,3 +168,4 @@ block content
     script(src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
     // Select2 CDN
     script(src='//cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js')
+    script(src='../js/slick.js')

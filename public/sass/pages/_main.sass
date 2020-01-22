@@ -183,6 +183,7 @@
         background-color: $palette__primary-accent
         border-radius: $border-radius
         box-shadow: $shadow-lighten
+        position: relative
     .new-collegue,
     .best-collegue,
     .birth-collegue
@@ -198,37 +199,40 @@
         &__headline
             +textline($palette__background, $headline, uppercase)
             font-weight: bolder
-            grid-area: headline
+            position: absolute
+            top: 1rem
+            left: 1rem
         &__img
-            width: 100%
+            width: 72px
             height: 72px
             object-fit: cover
-            grid-area: img
+            grid-column: 1
+            grid-row: 2/span 2
             border-radius: $border-radius
             align-self: end
         &__initial
             +textline($palette__background, $subheadline, uppercase)
             font-weight: bolder
-        &__position,
-        &__achivement,
-        &__datetime
-            +textline($palette__background, $textline, none)
-    .new-collegue
-        &__wrapper
-            grid-template-areas: 'headline headline' 'img initial' 'img position'
-        &__position
-                grid-area: position
-    .best-collegue
-        &__wrapper
-            grid-template-areas: 'headline headline' 'img initial' 'img achivement'
-        &__achivement
-            grid-area: achivement
-    .birth-collegue
-        &__wrapper
-            grid-template-areas: 'headline headline' 'img initial' 'img datetime'
-        &__datetime
-            grid-area: datetime
+            grid-column: 2
+            grid-row: 2
 
+    .new-collegue
+        &__position
+            grid-column: 2
+            grid-row: 3
+            +textline($palette__background, $textline, none)
+    .best-collegue
+        &__achivement
+            grid-column: 2
+            grid-row: 3
+            +textline($palette__background, $textline, none)
+    .birth-collegue
+        &__datetime
+            grid-column: 2
+            grid-row: 3
+            +textline($palette__background, $textline, none)
+    .slick-slide
+        display: grid !important
 
     &__forum
         grid-column: span 2

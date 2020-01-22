@@ -17,11 +17,11 @@
 	<body id="main">
 		<header class="header">
 			<div class="header-top header__header-top">
-				<div class="container">
-					<picture class="logo header-top__logo">
-						<source srcset="/img/logo/logo_horizontal_white.png" media="(min-width: 1024px)"/>
-						<source srcset="/img/logo/logo_mobile_white.png" media="(max-width: 1024px)"/><img class="logo__img" src="/img/logo/logo_horizontal_white.png" alt="Logo"/>
-					</picture>
+				<div class="container"><a class="logo header-top__logo" href="/pages/main.html">
+						<picture>
+							<source srcset="/img/logo/logo_horizontal_white.png" media="(min-width: 1024px)"/>
+							<source srcset="/img/logo/logo_mobile_white.png" media="(max-width: 1024px)"/><img class="logo__img" src="/img/logo/logo_horizontal_white.png" alt="Logo"/>
+						</picture></a>
 					<div class="social header-top__social"><a class="social__link" href="//www.instagram.com/czn.moyarabota/?igshid=10erac5i2oyhx">
 							<svg class="icon icon--ig">
 								<use xlink:href="/svg/sprite.svg#ig"></use>
@@ -46,7 +46,7 @@
 						<li class="nav__item"><a class="nav__link" href="#">База знаний</a></li>
 						<li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
 						<li class="nav__item"><a class="nav__link" href="#">Документы</a></li>
-						<li class="nav__item"><a class="nav__link" href="#">Наша команда</a>
+						<li class="nav__item"><a class="nav__link" href="/pages/ourteam.html">Наша команда</a>
 							<div class="dropdown nav__dropdown">
 								<ul class="dropdown__list">
 									<li class="dropdown__item"><a class="dropdown__link" href="#">Адреса отделов</a></li>
@@ -128,8 +128,20 @@
 					<h2 class="important__headline">Будь в курсе</h2>
 					<p class="important__description">Вся важная информация о деятельности Центра занятости</p><a class="important__link" href="#">23 мая состоялось совещание с начальниками отделов трудоустройства</a>
 				</article>
-				<article class="new-collegue main__new-collegue"><a class="new-collegue__wrapper" href="#">
-						<h2 class="new-collegue__headline">Новые сотрудники</h2><img class="new-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="new-collegue__initial">Смирнов Олег Дмитриевич</span><span class="new-collegue__position">Начальник отдела материального снабжения</span></a></article>
+				<article class="new-collegue main__new-collegue">
+					<h2 class="new-collegue__headline">Новые сотрудники</h2>
+					<div class="new-collegue__items"><a class="new-collegue__wrapper" href="#"><img class="new-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="new-collegue__initial">Смирнов Олег Дмитриевич</span><span class="new-collegue__position">Начальник отдела материального снабжения</span></a><a class="new-collegue__wrapper" href="#"><img class="new-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="new-collegue__initial">Смирнов Олег Дмитриевич</span><span class="new-collegue__position">Начальник отдела материального снабжения</span></a></div>
+					<button class="btn btn--slick-prev">
+						<svg class="icon icon--chevron-left">
+							<use xlink:href="../svg/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button class="btn btn--slick-next">
+						<svg class="icon icon--chevron-right">
+							<use xlink:href="../svg/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</article>
 				<article class="forum main__forum">
 					<h2 class="forum__headline">Говорите открыто</h2>
 					<p class="forum__description">Площадка для диалога с коллегами, руководством и единомышленниками</p><a class="forum__link" href="#">
@@ -137,13 +149,38 @@
 							<use xlink:href="../svg/sprite.svg#message"></use>
 						</svg><span class="forum__textline">18 новых комментариев</span></a>
 				</article>
-				<article class="best-collegue main__best-collegue"><a class="best-collegue__wrapper" href="#">
-						<h2 class="best-collegue__headline">Лучший сотрудник</h2><img class="best-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="best-collegue__initial">Смирнов Олег Дмитриевич</span><span class="best-collegue__achivement">Поздравляем с победой к конкурсе</span></a></article>
+				<article class="best-collegue main__best-collegue">
+					<h2 class="best-collegue__headline">Лучший сотрудник</h2>
+					<div class="best-collegue__items"><a class="best-collegue__wrapper" href="#"><img class="best-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="best-collegue__initial">Смирнов Олег Дмитриевич</span><span class="best-collegue__achivement">Поздравляем с победой к конкурсе</span></a><a class="best-collegue__wrapper" href="#"><img class="best-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="best-collegue__initial">Смирнов Олег Дмитриевич</span><span class="best-collegue__achivement">Поздравляем с победой к конкурсе</span></a></div>
+					<button class="btn btn--slick-prev">
+						<svg class="icon icon--chevron-left">
+							<use xlink:href="../svg/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button class="btn btn--slick-next">
+						<svg class="icon icon--chevron-right">
+							<use xlink:href="../svg/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</article>
 				<figure class="smi main__smi"><a class="smi__wrapper" href="#"><img class="smi__img" src="../img/smi/sob.jpg" alt="Sobyanin"/>
 						<figcaption class="smi__description">Мэр Москвы Сергей Собянин открыл флагманский Центр занятости населения "Моя работа" на ул. Щепкина</figcaption></a></figure>
-				<article class="birth-collegue main__birth-collegue"><a class="birth-collegue__wrapper" href="#">
-						<h2 class="birth-collegue__headline">Поздравляем</h2><img class="birth-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="birth-collegue__initial">Смирнов Олег Дмитриевич</span>
-						<time class="birth-collegue__datetime">27.05</time></a></article>
+				<article class="birth-collegue main__birth-collegue">
+					<h2 class="birth-collegue__headline">Поздравляем</h2>
+					<div class="birth-collegue__items"><a class="birth-collegue__wrapper" href="#"><img class="birth-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="birth-collegue__initial">Смирнов Олег Дмитриевич</span>
+							<time class="birth-collegue__datetime">27.05</time></a><a class="birth-collegue__wrapper" href="#"><img class="birth-collegue__img" src="../img/stub/no-img.jpg" alt="Away"/><span class="birth-collegue__initial">Смирнов Олег Дмитриевич</span>
+							<time class="birth-collegue__datetime">27.05</time></a></div>
+					<button class="btn btn--slick-prev">
+						<svg class="icon icon--chevron-left">
+							<use xlink:href="../svg/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button class="btn btn--slick-next">
+						<svg class="icon icon--chevron-right">
+							<use xlink:href="../svg/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</article>
 				<article class="raiting main__raiting"><a class="raiting__wrapper" href="#">
 						<svg class="icon icon--raiting">
 							<use xlink:href="../svg/sprite.svg#raiting"></use>
@@ -168,4 +205,5 @@
 	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- Select2 CDN-->
 	<script src="//cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+	<script src="../js/slick.js"></script>
 </html>
