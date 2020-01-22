@@ -1,7 +1,7 @@
 .auth
     .icon
-        max-width: 1.5rem
-        max-height: 1.5rem
+        max-width: 1rem
+        max-height: 1rem
         fill: $palette__secondary-lighten
 
 .header
@@ -49,7 +49,11 @@
             fill: $palette__background
             transform: scale(1)
             transition: $fast
-
+@media all and (min-width: 768px)
+    .auth
+        .icon
+            max-width: 1.5rem
+            max-height: 1.5rem
 @media all and (min-width: 1024px)
     .header
         .icon
@@ -60,6 +64,7 @@
     .auth
         .icon
             transition: $fast
+            
     .main
         &__selfhelp
             .nav
