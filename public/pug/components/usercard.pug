@@ -1,0 +1,10 @@
+include ../components/icon
+mixin usercard(cls, path)
+    .usercard(class = '' + cls + '__usercard')
+        img.usercard__img(src='' + path + 'img/stub/no-img.jpg', alt='User')
+        .usercard__fastacc
+            +icon(path, 'e-mail')
+            +icon(path, 'phone')
+        span.usercard__initial Фамилия Имя Отчество
+        span.usercard__departament Отдел эксплуатации автоматизированных систем
+        span.usercard__position Заместитель начальника отдела

@@ -2,6 +2,8 @@ extends ../layout/head
 include ../templates/header
 include ../components/icon
 include ../components/filter
+include ../components/usercard
+include ../components/pagination
 
 block title
     title Портал Моя работа - Наша команда
@@ -14,7 +16,16 @@ block links
 block content
     body#ourteam
         +header('/')
-        main.ourteam
-            +filter('ourteam__filter', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
-            .content
+        main.ourteam.ourteam--align-content
+            +filter('ourteam', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
+            section.ourteam__content
+                .container
+                    +usercard('ourteam', '../')
+                    +usercard('ourteam', '../')
+                    +usercard('ourteam', '../')
+                    +usercard('ourteam', '../')
+                    +usercard('ourteam', '../')
+                    +usercard('ourteam', '../')
+            +pagination('ourteam', '../')
+            //- +userPopUp()
         script(src='../js/main.js')

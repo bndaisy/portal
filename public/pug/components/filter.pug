@@ -1,4 +1,4 @@
-mixin filter(mix, array)
-    form.filter(class='' + mix)
-        - for(let i = 0; i < array.length; i++)
-            button.btn.btn--filter-item= array[i]
+mixin filter(cls, arr)
+    form.filter(class='' + cls + '__filter')
+        - for(let i = 0; i < arr.length; i++)
+            button.btn.btn--filter-item= arr[i]

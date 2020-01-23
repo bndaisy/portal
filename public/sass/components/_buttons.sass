@@ -21,6 +21,7 @@
         border-radius: $border-radius
         margin: 0 0 1rem
     &--slick-prev
+        background-color: $palette__background
         position: absolute
         top: 1rem
         right: 2.5rem
@@ -31,13 +32,12 @@
         border-top-left-radius: 50%
         border-bottom-left-radius: 50%
     &--slick-next
+        background-color: $palette__background
         position: absolute
         top: 1rem
         right: 1rem
         padding: 0.25rem
-        display: flex
-        justify-content: center
-        align-items: center
+        +flex-center
         border-top-right-radius: 50%
         border-bottom-right-radius: 50%
     &--filter-item
@@ -47,6 +47,16 @@
         border-bottom: 2px solid transparent
         &:not(:last-of-type)
             margin-right: 0.25rem
+    &--pagination-double-prev,
+    &--pagination-double-next,
+    &--pagination-prev,
+    &--pagination-next
+        padding: 0.5rem 0.75rem
+        +flex-center
+        border-radius: $border-radius
+        border: 1px solid $palette__secondary-lighten
+        margin: 0 0.25rem
+
             
     // &--close
     //     display: block
@@ -101,6 +111,16 @@
             &:hover
                 border-bottom: 2px solid $palette__primary-accent
                 cursor: pointer
+        &--pagination-double-prev,
+        &--pagination-double-next,
+        &--pagination-prev,
+        &--pagination-next
+            transition: $fast
+            &:hover
+                cursor: pointer
+                background-color: $palette__secondary-lighten
+                .icon
+                    fill: $palette__background
         // &--close
         //     transition: $fast
         //     &:hover
