@@ -5,7 +5,7 @@
         grid-template-rows: repeat(3, minmax(min-content, max-content))
         column-gap: 1rem
         row-gap: 0.25rem
-        grid-template-areas: 'img initial' 'img departament' 'fastacc position'
+        grid-template-areas: 'img initial' 'img departament' 'elements position'
         padding: 1rem
         border-radius: $border-radius
         background-color: transparent
@@ -31,10 +31,30 @@
             grid-area: position
             +textline($palette__secondary-lighten, $textline, none)
             transition: $fast
-        &__fastacc
-            grid-area: fastacc
+        &__elements
+            grid-area: elements
+            display: flex
             opacity: 0
             transition: $fast
+        .element
+            display: flex
+            align-self: start
+            position: relative
+            &:not(:last-of-type)
+                margin-right: 0.5rem
+        .tooltip
+            padding: 0.25rem 0.5rem
+            +textline($palette__secondary-lighten, $textline, none)
+            background-color: $palette__background
+            border-radius: $border-radius
+            border: 1px solid $palette__secondary-accent
+            display: none
+            position: absolute
+            left: 105%
+            z-index: 1
+            &.is-active
+                display: flex
+
 
 @media all and (min-width: 1024px)
     .ourteam
@@ -49,6 +69,6 @@
                     &__departament,
                     &__position
                         color: $palette__background
-                    &__fastacc
+                    &__elements
                         opacity: 1
 
