@@ -1,0 +1,15 @@
+include icon
+
+mixin userPopUp(cls, path)
+    .user-popup(class = '' + cls + '__user-popup')
+        img.user-popup__img(src='' + path + 'img/stub/no-img.jpg', alt='User')
+        .details.user-popup__details
+            span.details__initial Фамилия Имя Отчество
+            span.details__position Начальник отдела
+            span.details__departament Отдел эксплуатации автоматизированных систем
+            +icon(path, 'phone')
+            span.details__phone 8 (495) 444 55 11 доб. 1111
+            +icon(path, 'e-mail')
+            span.details__e-mail somepost@somedomen.com
+        .btn.btn--close
+    .user-popup__substrate

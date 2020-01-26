@@ -2,8 +2,9 @@ extends ../layout/head
 include ../templates/header
 include ../components/icon
 include ../components/filter
-include ../components/usercard
+include ../components/userCard
 include ../components/pagination
+include ../components/userPopUp
 
 block title
     title Портал Моя работа - Наша команда
@@ -20,13 +21,13 @@ block content
             +filter('ourteam', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
             section.ourteam__content
                 .container
-                    +usercard('ourteam', '../')
-                    +usercard('ourteam', '../')
-                    +usercard('ourteam', '../')
-                    +usercard('ourteam', '../')
-                    +usercard('ourteam', '../')
-                    +usercard('ourteam', '../')
+                    +userCard('ourteam', '../')
+                    +userCard('ourteam', '../')
+                    +userCard('ourteam', '../')
+                    +userCard('ourteam', '../')
+                    +userCard('ourteam', '../')
+                    +userCard('ourteam', '../')
             +pagination('ourteam', '../')
-            //- +userPopUp()
+            +userPopUp('ourteam', '../')
         script(src='../js/main.js')
         script(src='../js/tooltip.js')

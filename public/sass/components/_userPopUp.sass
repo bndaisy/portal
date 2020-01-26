@@ -1,0 +1,68 @@
+.ourteam
+    &__user-popup
+        position: absolute
+        z-index: 2
+        display: grid
+        grid-template-columns: 17.5rem
+        padding: 2rem 1rem
+        top: 1%
+        left: 1%
+        grid-template-areas: 'img' 'user-info'
+        background-color: $palette__background
+        border-radius: $border-radius
+    .user-popup
+        &__substrate
+            position: fixed
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            background-color: rgba(0, 0, 0, 0.7)
+            z-index: 1
+        &__img
+            grid-area: img
+            width: 100%
+            height: 280px
+            object-fit: cover
+            border-radius: $border-radius
+        &__details
+            grid-area: user-info
+            align-self: start
+            padding-top: 1.5rem
+            display: grid
+            column-gap: 0.5rem
+            row-gap: 0.5rem
+            grid-template-columns: 1.5rem 1fr
+            grid-template-areas: 'init init' 'position position' 'departament departament' 'icon-phone phone' 'icon-e-mail e-mail'
+
+        .details
+            &__initial
+                grid-area: init
+                +textline($palette__primary, $headline, uppercase)
+                font-weight: bolder
+                margin-bottom: 0.5rem
+            &__position
+                grid-area: position
+                +textline($palette__secondary, $subheadline, none)
+            &__departament
+                grid-area: departament
+                +textline($palette__secondary, $subheadline, none)
+                margin-bottom: 1rem
+            &__phone
+                grid-area: phone
+                +textline($palette__secondary, $subheadline, none)
+                align-self: center
+            &__e-mail
+                grid-area: e-mail
+                +textline($palette__secondary, $subheadline, none)
+                align-self: center
+
+@media all and (min-width: 768px)
+    .ourteam
+        &__user-popup
+            grid-template-columns: repeat(2, 17.5rem)
+            grid-template-areas: 'img user-info'
+            padding: 2rem
+            column-gap: 2rem
+            top: 27%
+            left: 33%

@@ -1,5 +1,5 @@
 .ourteam
-    &__usercard
+    &__user-card
         display: grid
         grid-template-columns: 4.5rem 1fr
         grid-template-rows: repeat(3, minmax(min-content, max-content))
@@ -9,7 +9,7 @@
         padding: 1rem
         border-radius: $border-radius
         background-color: transparent
-    .usercard
+    .user-card
         &__img
             max-width: 4.5rem
             max-height: 4.5rem
@@ -31,15 +31,16 @@
             grid-area: position
             +textline($palette__secondary-lighten, $textline, none)
             transition: $fast
-        &__elements
+        &__tooltip-elements
             grid-area: elements
             display: flex
             opacity: 0
             transition: $fast
-        .element
+        .tooltip-element
             display: flex
             align-self: start
             position: relative
+            margin: 0.25rem 0
             &:not(:last-of-type)
                 margin-right: 0.5rem
         .tooltip
@@ -52,23 +53,35 @@
             position: absolute
             left: 105%
             z-index: 1
+            &::after
+                content: ''
+                display: block
+                background-color: $palette__background
+                border-top: 1px solid $palette__secondary-accent
+                border-left: 1px solid $palette__secondary-accent
+                width: 0.5rem
+                height: 0.5rem
+                position: absolute
+                left: -5px
+                top: 30%
+                transform: rotate(-45deg)
             &.is-active
                 display: flex
 
 
 @media all and (min-width: 1024px)
     .ourteam
-        &__usercard
+        &__user-card
             transition: $fast
             &:hover
                 cursor: pointer
                 background-color: $palette__primary
                 box-shadow: $shadow-lighten
-                .usercard
+                .user-card
                     &__initial,
                     &__departament,
                     &__position
                         color: $palette__background
-                    &__elements
+                    &__tooltip-elements
                         opacity: 1
 

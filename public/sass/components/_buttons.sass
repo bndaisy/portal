@@ -56,35 +56,34 @@
         border-radius: $border-radius
         border: 1px solid $palette__primary
         margin: 0 0.25rem
-
-            
-    // &--close
-    //     display: block
-    //     position: absolute
-    //     top: -1.5rem 
-    //     right: -1.5rem
-    //     border: none
-    //     width: 1.5rem
-    //     height: 1.5rem
-    //     background-color: transparent
-    //     &::before
-    //         content: ''
-    //         width: 1.5rem
-    //         height: 2px
-    //         transform: rotate(45deg)
-    //         background-color: $palette__secondary-lighten
-    //         display: block
-    //         position: absolute
-    //         transition: $fast
-    //     &::after
-    //         content: ''
-    //         width: 1.5rem
-    //         height: 2px
-    //         transform: rotate(-45deg)
-    //         position: absolute
-    //         background-color: $palette__secondary-lighten
-    //         display: block
-    //         transition: $fast
+      
+    &--close
+        display: block
+        position: absolute
+        top: 1.5rem 
+        right: 1rem
+        border: none
+        width: 1.5rem
+        height: 1.5rem
+        background-color: transparent
+        &::before
+            content: ''
+            width: 1.5rem
+            height: 2px
+            transform: rotate(45deg)
+            background-color: $palette__secondary-lighten
+            display: block
+            position: absolute
+            transition: $fast
+        &::after
+            content: ''
+            width: 1.5rem
+            height: 2px
+            transform: rotate(-45deg)
+            position: absolute
+            background-color: $palette__secondary-lighten
+            display: block
+            transition: $fast
 
 @media all and (min-width: 768px)
     .btn
@@ -121,11 +120,11 @@
                 background-color: $palette__primary
                 .icon
                     fill: $palette__background
-        // &--close
-        //     transition: $fast
-        //     &:hover
-        //         cursor: pointer
-        //         &::after
-        //            background-color: $palette__primary
-        //         &::before
-        //            background-color: $palette__primary  
+        &--close
+            transition: $fast
+            &:hover
+                cursor: pointer
+                &::after
+                   background-color: $palette__primary
+                &::before
+                   background-color: $palette__primary  

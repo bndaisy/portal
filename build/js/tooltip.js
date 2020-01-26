@@ -1,1 +1,1 @@
-!function(){let e=document.querySelectorAll(".element"),t=document.querySelectorAll(".tooltip");e.forEach((e,o)=>{e.addEventListener("mouseover",()=>t[o].classList.add("is-active")),e.addEventListener("mouseout",()=>t[o].classList.remove("is-active"))})}();
+!function(){let e=document.querySelectorAll(".tooltip-element"),t=document.querySelectorAll(".tooltip");e.forEach((e,o)=>{e.addEventListener("mouseover",()=>t[o].classList.add("is-active")),e.addEventListener("mouseout",()=>t[o].classList.remove("is-active"))})}();

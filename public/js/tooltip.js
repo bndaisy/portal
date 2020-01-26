@@ -1,5 +1,5 @@
 (function(){
-    let element = document.querySelectorAll('.element'),
+    let element = document.querySelectorAll('.tooltip-element'),
         tooltip = document.querySelectorAll('.tooltip');
 
     element.forEach((item, index) => {

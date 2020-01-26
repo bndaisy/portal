@@ -1,14 +1,14 @@
 include ../components/icon
-mixin usercard(cls, path)
-    .usercard(class = '' + cls + '__usercard')
-        img.usercard__img(src='' + path + 'img/stub/no-img.jpg', alt='User')
-        .usercard__elements
-            .element
+mixin userCard(cls, path)
+    .user-card(class = '' + cls + '__user-card')
+        img.user-card__img(src='' + path + 'img/stub/no-img.jpg', alt='User')
+        .user-card__tooltip-elements
+            .tooltip-element
                 +icon(path, 'e-mail')
                 span.tooltip somepost@somedomen.com
-            .element
+            .tooltip-element
                 +icon(path, 'phone')
                 span.tooltip somephone
-        span.usercard__initial Фамилия Имя Отчество
-        span.usercard__departament Отдел эксплуатации автоматизированных систем
-        span.usercard__position Заместитель начальника отдела
+        span.user-card__initial Фамилия Имя Отчество
+        span.user-card__departament Отдел эксплуатации автоматизированных систем
+        span.user-card__position Заместитель начальника отдела
