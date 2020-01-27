@@ -2,7 +2,6 @@
     &__user-popup
         position: absolute
         z-index: 2
-        display: grid
         grid-template-columns: 17.5rem
         padding: 2rem 1rem
         top: 1%
@@ -10,15 +9,21 @@
         grid-template-areas: 'img' 'user-info'
         background-color: $palette__background
         border-radius: $border-radius
+        display: none
+        &.is-active
+            display: grid
     .user-popup
         &__substrate
             position: fixed
+            display: none
             top: 0
             left: 0
             bottom: 0
             right: 0
             background-color: rgba(0, 0, 0, 0.7)
             z-index: 1
+            &.is-active
+                display: block
         &__img
             grid-area: img
             width: 100%
