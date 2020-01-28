@@ -9,28 +9,27 @@ block links
 
 block content
     body#auth
-        .alignbox
-            .auth.auth--align-content
-                picture.logo.auth__logo
-                    source(srcset='img/logo/logo_vertical.png', media='(min-width: 768px)')
-                    source(srcset='img/logo/logo_mobile.png', media='(max-width: 768px)')
-                    img.logo__img(src='img/logo/logo_vertical.png', alt='Logo')
-                +social('auth__social')
-                form.entry.auth__entry.is-active(action='pages/main.html')
-                    h1.entry__headline Авторизация
-                    p.error.entry__error Неверный логин или пароль
-                    input.entry__input(type='text', id='login')
-                    label.entry__label(for='login') Логин
-                    input.entry__input(type='password', id='password')
-                    label.entry__label(for='password') Пароль
-                    button.btn.btn--primary Войти
-                    a.entry__forget(href='#') Забыли пароль?
-                form.recovery.auth__recovery(action='#')
-                    h2.recovery__headline Восстановление
-                    p.error.recovery__error Неверный логин
-                    input.recovery__input(type='text', id='recovery')
-                    label.recovery__label(for='recovery') Логин
-                    button.btn.btn--primary Восстановить
-                    a.recovery__back(href='#') Вернуться
+        .auth.auth--align
+            picture.logo.auth__logo
+                source(srcset='img/logo/logo_vertical.png', media='(min-width: 768px)')
+                source(srcset='img/logo/logo_mobile.png', media='(max-width: 768px)')
+                img.logo__img(src='img/logo/logo_vertical.png', alt='Logo')
+            +social('auth__social')
+            form.entry.auth__entry.is-active(action='pages/main.html')
+                h1.entry__headline Авторизация
+                p.error.entry__error Неверный логин или пароль
+                input.entry__input(type='text', id='login')
+                label.entry__label(for='login') Логин
+                input.entry__input(type='password', id='password')
+                label.entry__label(for='password') Пароль
+                button.btn.btn--primary Войти
+                a.entry__forget(href='#') Забыли пароль?
+            form.recovery.auth__recovery(action='#')
+                h2.recovery__headline Восстановление
+                p.error.recovery__error Неверный логин
+                input.recovery__input(type='text', id='recovery')
+                label.recovery__label(for='recovery') Логин
+                button.btn.btn--primary Восстановить
+                a.recovery__back(href='#') Вернуться
 
         script(src='js/auth.js')
