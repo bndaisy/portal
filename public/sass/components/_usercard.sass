@@ -10,7 +10,6 @@
         grid-template-areas: 'img initial' 'img departament' 'elements position'
         padding: 1rem
         border-radius: $border-radius
-        background-color: transparent
     .user-card
         &__img
             max-width: 4.5rem
@@ -68,6 +67,10 @@
                 top: 30%
                 transform: rotate(-45deg)
             &.is-active
+
+.birth-collegue
+    &__user-card
+        background-color: rgba(255,255,255, 0.9)
 
 @media all and (min-width: 1024px)
     .ourteam,
