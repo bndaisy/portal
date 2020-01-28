@@ -1,5 +1,6 @@
 .ourteam,
-.new-collegue
+.new-collegue,
+.birth-collegue
     &__user-card
         display: grid
         grid-template-columns: 4.5rem 1fr
@@ -67,12 +68,11 @@
                 top: 30%
                 transform: rotate(-45deg)
             &.is-active
-                display: flex
-
 
 @media all and (min-width: 1024px)
     .ourteam,
-    .new-collegue
+    .new-collegue,
+    .birth-collegue
         &__user-card
             transition: $fast
             &:hover

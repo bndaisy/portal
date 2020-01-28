@@ -1,0 +1,34 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/filter
+include ../components/userCard
+include ../components/pagination
+include ../components/userPopUp
+
+block title
+    title Портал Моя работа - Дни рождения
+
+block links
+    link(rel='stylesheet', href='../css/main.css')
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    
+block content
+    body#birth-collegue
+        +header('/')
+        main.birth-collegue.birth-collegue--align
+            +filter('birth-collegue', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
+            section.birth-collegue__content
+                .container
+                    +userCard('birth-collegue', '../')
+                    +userCard('birth-collegue', '../')
+                    +userCard('birth-collegue', '../')
+                    +userCard('birth-collegue', '../')
+                    +userCard('birth-collegue', '../')
+                    +userCard('birth-collegue', '../')
+            +pagination('birth-collegue', '../')
+            +userPopUp('birth-collegue', '../')
+        script(src='../js/main.js')
+        script(src='../js/tooltip.js')
+        script(src='../js/userPopUp.js')
