@@ -40,7 +40,7 @@
             column-gap: 0.5rem
             row-gap: 0.5rem
             grid-template-columns: 1.5rem 1fr
-            grid-template-areas: 'init init' 'position position' 'departament departament' 'icon-phone phone' 'icon-e-mail e-mail'
+            grid-template-areas: 'init init' 'position position' 'departament departament' 'icon-location location' 'icon-phone phone' 'icon-e-mail e-mail'
 
         .details
             &__initial
@@ -55,6 +55,10 @@
                 grid-area: departament
                 +textline($palette__secondary, $subheadline, none)
                 margin-bottom: 1rem
+            &__location
+                grid-area: location
+                +textline($palette__secondary, $subheadline, none)
+                align-self: center
             &__phone
                 grid-area: phone
                 +textline($palette__secondary, $subheadline, none)
