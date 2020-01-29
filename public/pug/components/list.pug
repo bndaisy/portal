@@ -1,0 +1,10 @@
+include icon
+
+mixin list(path, cls, headline, array)
+    ul.list(class='' + cls + '__list')
+        +icon(path, cls)
+        h2.list__headline= headline
+        - for(let i = 0; i < array.length; i++)
+            li.list__item
+                a.list__link(href='#')= array[i]
+

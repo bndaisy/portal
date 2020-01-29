@@ -18,7 +18,7 @@ block content
     body#birth-collegue
         +header('/')
         main.birth-collegue.birth-collegue--align
-            +filter('birth-collegue', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
+            +filter('birth-collegue', ['Позавчера','Вчера', 'Сегодня', 'Завтра', 'Послезавтра'])
             section.birth-collegue__content
                 .container
                     +userCard('birth-collegue', '../')

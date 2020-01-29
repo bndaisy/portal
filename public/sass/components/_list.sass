@@ -1,0 +1,41 @@
+.location
+    &__list
+        display: grid
+        grid-template-columns: 1.5rem minmax(min-content, max-content)
+        column-gap: 0.5rem
+        align-self: start
+    .list
+        &__headline
+            +textline($palette__primary,$headline, uppercase)
+            font-weight: bolder
+            grid-column: 2
+            grid-row: 1
+            align-self: center
+            position: relative
+            margin-bottom: 0.5rem
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                width: 15.75rem
+                height: 1px
+                top: 130%
+                left: -2rem
+                background-color: $palette__secondary-lighten
+        &__item
+            grid-column: span 2
+            align-self: center
+            display: block
+            &:not(:last-of-type)
+                margin-bottom: 0.25rem
+                
+        &__link
+            +textline($palette__secondary,$subheadline, none)
+            display: block
+            width: 100%
+            height: 100%
+            transition: $fast
+            &:hover
+                color: $palette__primary
+
+
