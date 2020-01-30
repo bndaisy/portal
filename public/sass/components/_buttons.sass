@@ -86,6 +86,12 @@
             background-color: $palette__secondary-lighten
             display: block
             transition: $fast
+.location-popup
+    .btn
+        &--close
+            &::after,
+            &::before
+                background-color: $palette__background
 .birth-collegue
     .btn
         &--filter-item
@@ -138,3 +144,10 @@
                    background-color: $palette__primary
                 &::before
                    background-color: $palette__primary  
+    .location-popup
+        .btn
+            &--close
+                &:hover
+                    &::after,
+                    &::before
+                        background-color: $palette__secondary-lighten

@@ -200,7 +200,63 @@
 					<li class="list__item"><a class="list__link" href="#">название отдела</a></li>
 				</ul>
 			</div>
+			<div class="location-popup location__location-popup">
+				<div class="location-popup__inner"><img class="location-popup__img" src="../img/stub/location.png" alt="User"/></div>
+				<div class="details location-popup__details"><span class="details__initial">Наименование отдела</span>
+					<svg class="icon icon--index">
+						<use xlink:href="../svg/sprite.svg#index"></use>
+					</svg><span class="details__index">111111</span>
+					<svg class="icon icon--location">
+						<use xlink:href="../svg/sprite.svg#location"></use>
+					</svg><span class="details__location">ул. Щепкина, 38 стр 1</span>
+					<svg class="icon icon--subway">
+						<use xlink:href="../svg/sprite.svg#subway"></use>
+					</svg><span class="details__subway">Проспект Мира</span>
+					<svg class="icon icon--phone">
+						<use xlink:href="../svg/sprite.svg#phone"></use>
+					</svg><span class="details__phone">8 (495) 444 55 11 доб. 1111</span>
+					<svg class="icon icon--e-mail">
+						<use xlink:href="../svg/sprite.svg#e-mail"></use>
+					</svg><span class="details__e-mail">somepost@somedomen.com</span>
+					<svg class="icon icon--worktime">
+						<use xlink:href="../svg/sprite.svg#worktime"></use>
+					</svg>
+					<table class="worktime details__worktime">
+						<tr>
+							<td class="worktime__headline">ПН</td>
+							<td class="worktime__value">08:00 - 20:00</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">ВТ</td>
+							<td class="worktime__value">08:00 - 20:00</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">СР</td>
+							<td class="worktime__value">08:00 - 20:00</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">ЧТ</td>
+							<td class="worktime__value">08:00 - 20:00</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">ПТ</td>
+							<td class="worktime__value">08:00 - 20:00</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">СБ</td>
+							<td class="worktime__value">выходной</td>
+						</tr>
+						<tr>
+							<td class="worktime__headline">ВС</td>
+							<td class="worktime__value">выходной</td>
+						</tr>
+					</table>
+				</div>
+				<div class="btn btn--close"></div>
+			</div>
+			<div class="location-popup__substrate"></div>
 		</main>
 		<script src="../js/main.js"></script>
+		<script src="../js/locationPopUp.js"></script>
 	</body>
 </html>

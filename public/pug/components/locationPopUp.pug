@@ -1,0 +1,44 @@
+include icon
+
+mixin locationPopUp(cls, path)
+    .location-popup(class = '' + cls + '__location-popup')
+        .location-popup__inner
+            img.location-popup__img(src='' + path + 'img/stub/location.png', alt='User')
+        .details.location-popup__details
+            span.details__initial Наименование отдела
+            +icon(path, 'index')
+            span.details__index 111111
+            +icon(path, 'location')
+            span.details__location ул. Щепкина, 38 стр 1
+            +icon(path, 'subway')
+            span.details__subway Проспект Мира
+            +icon(path, 'phone')
+            span.details__phone 8 (495) 444 55 11 доб. 1111
+            +icon(path, 'e-mail')
+            span.details__e-mail somepost@somedomen.com
+            +icon(path, 'worktime')
+            table.worktime.details__worktime
+                tr
+                    td.worktime__headline ПН
+                    td.worktime__value 08:00 - 20:00
+                tr
+                    td.worktime__headline ВТ
+                    td.worktime__value 08:00 - 20:00
+                tr
+                    td.worktime__headline СР
+                    td.worktime__value 08:00 - 20:00
+                tr
+                    td.worktime__headline ЧТ
+                    td.worktime__value 08:00 - 20:00
+                tr
+                    td.worktime__headline ПТ
+                    td.worktime__value 08:00 - 20:00
+                tr
+                    td.worktime__headline СБ
+                    td.worktime__value выходной
+                tr
+                    td.worktime__headline ВС
+                    td.worktime__value выходной
+
+        .btn.btn--close
+    .location-popup__substrate

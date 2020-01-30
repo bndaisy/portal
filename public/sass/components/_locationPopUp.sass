@@ -1,0 +1,100 @@
+.location
+    &__location-popup
+        z-index: 2
+        grid-template-columns: 15rem
+        padding: 2rem
+        grid-template-areas: 'img' 'location-info'
+        background-color: $palette__primary
+        border-radius: $border-radius
+        display: none
+        position: absolute
+        row-gap: 1rem
+        left: calc(50vw - 151px)
+        top: calc(50vh - 280px)
+        bottom: calc(50vh - 280px)
+        &.is-active
+            display: grid
+    .location-popup
+        &__substrate
+            position: fixed
+            display: none
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            background-color: rgba(0, 0, 0, 0.7)
+            z-index: 1
+            &.is-active
+                display: block
+        &__inner
+            grid-area: img
+            width: 100%
+            min-height: 10rem
+            overflow: hidden
+            border-radius: $border-radius
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: $border-radius
+        &__details
+            grid-area: location-info
+            align-self: start
+            display: grid
+            column-gap: 0.5rem
+            row-gap: 0.25rem
+            grid-template-columns: 1.5rem 1fr
+            grid-template-areas: 'init init' 'icon-index index' 'icon-location location' 'icon-subway subway' 'icon-phone phone' 'icon-e-mail e-mail' 'icon-worktime worktime'
+
+        .details
+            &__initial
+                grid-area: init
+                +textline($palette__background, $headline, uppercase)
+                font-weight: bolder
+                margin-bottom: 0.5rem
+            &__index
+                grid-area: index
+            &__location
+                grid-area: location
+            &__subway
+                grid-area: subway
+            &__phone
+                grid-area: phone
+            &__e-mail
+                grid-area: e-mail
+            &__index,
+            &__location,
+            &__subway,
+            &__phone,
+            &__e-mail
+                +textline($palette__background, $subheadline, none)
+                align-self: center
+        .worktime
+            &__headline
+                +textline($palette__background, $subheadline, none)
+                width: 1.75rem
+            &__value
+                +textline($palette__background, $subheadline, none)
+
+
+@media all and (min-width: 1024px)
+    .location
+        &__location-popup
+            grid-template-columns: 27rem 17.5rem
+            grid-template-areas: 'img location-info'
+            padding: 2rem
+            column-gap: 2rem
+            left: calc(50vw - 388px)
+            top: calc(50vh - 209px)
+            bottom: calc(50vh - 209px)
+        .location-popup
+            &__inner
+                height: 22.0625rem
+            &__img
+                transform: scale(1)
+                transition: $fast
+                &:hover
+                    transform: scale(1.5)
+            .details
+                &__initial
+                    margin-bottom: 1.5rem

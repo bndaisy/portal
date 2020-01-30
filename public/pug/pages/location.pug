@@ -2,6 +2,7 @@ extends ../layout/head
 include ../templates/header
 include ../components/icon
 include ../components/list
+include ../components/locationPopUp
 
 block title
     title Портал Моя работа - Наша команда
@@ -29,5 +30,6 @@ block content
                 +list('../', 'location', 'ТАО', ['название отдела', 'название отдела', 'название отдела', 'название отдела', 'название отдела'])
                 +list('../', 'location', 'НАО', ['название отдела', 'название отдела', 'название отдела', 'название отдела', 'название отдела'])
                 +list('../', 'location', 'ЗЕЛАО', ['название отдела', 'название отдела', 'название отдела', 'название отдела', 'название отдела'])
-
+            +locationPopUp('location', '../')
         script(src='../js/main.js')
+        script(src='../js/locationPopUp.js')
