@@ -18,7 +18,7 @@ block content
     body#ourteam
         +header('/')
         main.ourteam.ourteam--align
-            +filter('ourteam', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'])
+            +filter('ourteam', ['Все','A', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Э', 'Ю', 'Я'], 0)
             section.ourteam__content
                 .container
                     +userCard('ourteam', '../')
@@ -31,4 +31,5 @@ block content
             +userPopUp('ourteam', '../')
         script(src='../js/main.js')
         script(src='../js/tooltip.js')
+        script(src='../js/filter.js')
         script(src='../js/userPopUp.js')

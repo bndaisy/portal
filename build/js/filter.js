@@ -1,0 +1,1 @@
+!function(){let t=document.querySelectorAll(".btn--filter-item");function i(){t.forEach(t=>{t.classList.contains("is-active")&&t.classList.remove("is-active")}),this.classList.add("is-active")}t.forEach(t=>t.addEventListener("click",i))}();

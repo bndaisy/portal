@@ -1,4 +1,7 @@
-mixin filter(cls, arr)
-    form.filter(class='' + cls + '__filter')
+mixin filter(cls, arr, active)
+    .filter(class='' + cls + '__filter')
         - for(let i = 0; i < arr.length; i++)
-            button.btn.btn--filter-item= arr[i]
+            if(i == active) 
+                .btn.btn--filter-item.is-active= arr[i]
+            else
+                .btn.btn--filter-item= arr[i]

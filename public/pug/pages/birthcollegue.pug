@@ -18,7 +18,7 @@ block content
     body#birth-collegue
         +header('/')
         main.birth-collegue.birth-collegue--align
-            +filter('birth-collegue', ['Позавчера','Вчера', 'Сегодня', 'Завтра', 'Послезавтра'])
+            +filter('birth-collegue', ['Позавчера','Вчера', 'Сегодня', 'Завтра', 'Послезавтра'], 2)
             section.birth-collegue__content
                 .container
                     +userCard('birth-collegue', '../')
@@ -31,4 +31,5 @@ block content
             +userPopUp('birth-collegue', '../')
         script(src='../js/main.js')
         script(src='../js/tooltip.js')
+        script(src='../js/filter.js')
         script(src='../js/userPopUp.js')
