@@ -1,0 +1,26 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/tabs
+include ../components/pagination
+
+
+block title
+    title Портал Моя работа - База знаний
+
+block links
+    link(rel='stylesheet', href='../css/main.css')
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    
+block content
+    body#knowlege
+        +header('/')
+        main.knowlege.knowlege--align
+            +tabs(['Видеоуроки', 'Вебинары', 'Презентации'], 0, ['one', 'two', 'three'])
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, numquam!
+            //- +pagination('knowlege', '../')
+
+        script(src='../js/main.js')
+        script(src='../js/tabs.js')
+

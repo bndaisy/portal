@@ -1,0 +1,18 @@
+mixin tabs(arrNav, isActive, arrCls)
+    .tabs
+        .tabs-nav
+            .container
+                - for(let i = 0; i < arrNav.length; i++)
+                    if(i == isActive)
+                        .tabs-nav__item(data-tab-name = 'tab__' + arrCls[i]).is-active= arrNav[i]
+                    else
+                        .tabs-nav__item(data-tab-name = 'tab__' + arrCls[i])= arrNav[i]
+        .tabs-content
+            .container
+                - for(let i = 0; i < arrNav.length; i++)
+                    if(i == isActive)
+                        .tabs-content__item(class = 'tab__' + arrCls[i]).is-active
+                            block
+                    else
+                        .tabs-content__item(class = 'tab__' + arrCls[i])
+                            block
