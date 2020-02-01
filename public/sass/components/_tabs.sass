@@ -1,32 +1,61 @@
+.knowlege
+    .tabs
+        display: grid
+        grid-template-rows: minmax(min-content, max-content) 1fr
+    .tabs-nav
+        .container
+            display: flex
+            margin: 1rem 0.5rem
+        &__item
+            padding: 0.25rem 0.5rem
+            +textline($palette__primary, $textline, uppercase)
+            font-weight: bolder
+            border-bottom: 2px solid transparent
+            &:not(:last-of-type)
+                margin-right: 1rem
+            &.is-active
+                border-bottom: 2px solid $palette__primary-accent
+    .tabs-content
+        background-color: $palette__foreground
+        padding: 1rem 0.5rem
+        .container
+            margin: 0 auto
+        &__item
+            display: none
+            &.is-active
+                display: grid
+
+@media all and (min-width: 360px)
+    .knowlege
+        .tabs-nav
+            .container
+                margin: 1rem
+        .tabs-content
+            padding: 1rem
+
 @media all and (min-width:  1024px)
     .knowlege
         .tabs-nav
             .container
-                display: flex
-                margin: 2rem auto
+                margin: 2rem 1rem
             &__item
-                padding: 0.25rem 0.5rem
-                +textline($palette__primary, $headline, uppercase)
-                font-weight: bolder
-                border-bottom: 2px solid transparent
+                font-size: $headline
                 transition: $fast
-                &:not(:last-of-type)
-                    margin-right: 1rem
                 &:hover
                     cursor: pointer
                     border-bottom: 2px solid $palette__primary-accent
-                &.is-active
-                    border-bottom: 2px solid $palette__primary-accent
         .tabs-content
-            background-color: $palette__foreground
-            padding: 2rem 0
-            height: 100%
+            padding: 2rem 1rem
             .container
                 margin: 0 auto
-            &__item
-                display: none
-                &.is-active
-                    display: grid
+
+@media all and (min-width:  1300px)
+    .knowlege
+        .tabs-nav
+            .container
+                margin: 2rem auto
+        .tabs-content
+            padding: 2rem 0
 
 
 

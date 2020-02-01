@@ -2,11 +2,12 @@
     let tabsNavItems = document.querySelectorAll('.tabs-nav__item'),
         tabsContentItems = document.querySelectorAll('.tabs-content__item');
 
+    let clearClasses = (item) => item.classList.remove('is-active');
+
         function makeTabActive(event){
             let target = event.target.getAttribute('data-tab-name');
 
-            tabsNavItems.forEach(item => {
-                if(item.classList.contains('is-active')) item.classList.remove('is-active')});
+            tabsNavItems.forEach(item => clearClasses(item));
 
             this.classList.add('is-active');
 
@@ -15,7 +16,7 @@
 
         function makeContentActive(target){
             tabsContentItems.forEach(item => {
-                if(item.classList.contains('is-active')) item.classList.remove('is-active')
+                clearClasses(item)
                 if(item.classList.contains(target)) item.classList.add('is-active')
             });
         }
