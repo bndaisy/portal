@@ -3,6 +3,7 @@ include ../templates/header
 include ../components/icon
 include ../components/tabs
 include ../components/pagination
+include ../components/contentCard
 
 
 block title
@@ -18,7 +19,9 @@ block content
         +header('/')
         main.knowlege.knowlege--align
             +tabs(['Видеоуроки', 'Вебинары', 'Презентации'], 0, ['one', 'two', 'three'])
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, numquam!
+                +contentCard('../', 'knowlege', 'Видеоурок')
+                +contentCard('../', 'knowlege', 'Презентация')
+                +contentCard('../', 'knowlege', 'Вебинар')
             +pagination('knowlege', '../')
 
         script(src='../js/main.js')
