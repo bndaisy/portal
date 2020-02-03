@@ -1,6 +1,14 @@
 .btn
     border: none
     background-color: transparent
+    &--accent
+        justify-self: self-end
+        background-color: $palette__primary-accent
+        border-radius: $border-radius
+        padding: 0.25rem 1rem
+        margin: 0.5rem 1rem 1rem
+        +textline($palette__background, $headline, uppercase)
+        font-weight: bolder
     &--search
         align-self: self-start
         position: absolute
@@ -98,6 +106,7 @@
             text-transform: uppercase
             &:not(:last-of-type)
                 margin-right: 0.75rem
+
                 
 @media all and (min-width: 768px)
     .btn
@@ -107,6 +116,10 @@
 @media all and (min-width: 1024px)
     .btn
         transition: $fast
+        &--accent
+            &:hover
+                cursor: pointer
+                background-color: lighten($palette__primary-accent, 10%)
         &--search
             &:hover
                 background-color: $palette__secondary-accent

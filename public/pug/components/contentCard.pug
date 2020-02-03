@@ -2,14 +2,14 @@ mixin contentCard(path, cls, type)
     .content-card(class = '' + cls + '__content-card')
         if(type == 'Видеоурок')
             iframe(src='' + path + 'img/stub/no-img.jpg', frameborder='0' allowfullscreen).content-card__iframe
-            h3.content-card__headline Какой-то видеоурок
+            h3.content-card__headline Название видеоурока
             p.content-card__text Какое-то описание
         if(type == 'Вебинар')
             iframe(src='' + path + 'img/stub/no-img.jpg', frameborder='0' allowfullscreen).content-card__iframe
-            h3.content-card__headline Какой-то вебинар
+            h3.content-card__headline Название вебинара
             p.content-card__text Какое-то описание
         if(type == 'Презентация')
             iframe(src='' + path + 'img/stub/no-img.jpg', frameborder='0' allowfullscreen).content-card__iframe
-            h3.content-card__headline Какая-то презентация
+            h3.content-card__headline Название презентации
             p.content-card__text Какое-то описание
-            .btn.btn--download Скачать
+            button.btn.btn--accent Скачать
