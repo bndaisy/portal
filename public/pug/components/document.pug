@@ -1,0 +1,18 @@
+include icon
+
+mixin document(path, category)
+    .document.documents__document
+        span.document__headline Наименование документа
+        case category
+            when 'Федеральный'
+                span.document__category.document__category--federal= category
+            when 'Московский'
+                span.document__category.document__category--moscow= category
+            when 'Департамента'
+                span.document__category.document__category--departament= category
+            when 'Внутренний'
+                span.document__category.document__category--inner= category
+        span.document__date-title Дата добавления
+        time.document__date(datetime='2020-01-15') 15.01.2020
+        +icon(path, 'view')
+        +icon(path, 'download')

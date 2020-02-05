@@ -7,3 +7,20 @@
     &--align
         display: grid
         grid-template-rows: 1fr minmax(min-content, max-content)
+    &__headline
+        +textline($palette__secondary, $subheadline, uppercase)
+        font-weight: normal
+        text-align: center
+        border-bottom: 1px solid $palette__secondary-lighten
+        padding: 0.5rem 1rem
+        &:not(:first-of-type)
+            margin-top: 2rem
+
+@media all and (min-width: 768px)
+    .documents
+        &__headline
+            text-align: left
+            font-size: $headline
+    
+
+            

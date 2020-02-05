@@ -116,7 +116,19 @@
         &--worktime
             grid-area: icon-worktime
 
-
+.documents
+    .icon
+        &--view
+            fill: $palette__secondary-lighten
+            grid-area: icon-view
+            align-self: center
+            justify-self: center
+        &--download
+            fill: $palette__secondary-lighten
+            grid-area: icon-download
+            align-self: center
+            justify-self: center
+            // margin: 0 0.5rem 0 0.25rem
 
 @media all and (min-width: 768px)
     .auth
@@ -172,4 +184,17 @@
     .documents
         .pagination
             .icon
-                transition: $fast    
+                transition: $fast   
+
+    .documents
+        .icon
+            transition: $fast
+            &--view
+                &:hover
+                    cursor: pointer
+                    fill: $palette__primary-accent
+            &--download
+                &:hover
+                    cursor: pointer
+                    fill: $palette__secondary-accent
+

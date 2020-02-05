@@ -3,9 +3,10 @@ include ../templates/header
 include ../components/icon
 include ../components/tabs
 include ../components/pagination
+include ../components/document
 
 block title
-    title Портал Моя работа - База знаний
+    title Портал Моя работа - Документы
 
 block links
     link(rel='stylesheet', href='../css/main.css')
@@ -16,10 +17,29 @@ block content
     body#documents
         +header('/')
         main.documents.documents--align
-            +tabs-nav(['Учредительные', 'Нормативные', 'Внутренние'], 0, ['one', 'two', 'three'])
+            +tabs-nav(['Учредительные', 'Нормативные', 'Кадровые', 'Маркетинг'], 0, ['one', 'two', 'three', 'four'])
                 +tabs-content(true, 'one')
+                    +document('../', false)
+                    +document('../', false)
                 +tabs-content(false, 'two')
+                    h3.documents__headline Общее наименование документа
+                    +document('../', 'Федеральный')
+                    +document('../', 'Московский')
+                    +document('../', 'Департамента')
+                    +document('../', 'Внутренний')
+                    h3.documents__headline Общее наименование документа
+                    +document('../', 'Федеральный')
+                    +document('../', 'Московский')
+                    h3.documents__headline Общее наименование документа
+                    +document('../', 'Московский')
+                    +document('../', 'Внутренний')
+
                 +tabs-content(false, 'three')
+                    h3.documents__headline Общее наименование документа
+                    +document('../', false)
+                    +document('../', false)
+                +tabs-content(false, 'four')
+                    +document('../', false)
 
             +pagination('documents', '../')
 
