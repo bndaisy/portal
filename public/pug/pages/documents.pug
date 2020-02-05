@@ -16,7 +16,10 @@ block content
     body#documents
         +header('/')
         main.documents.documents--align
-            +tabs(['Учредительные', 'Нормативные', 'Внутренние'], 0, ['one', 'two', 'three'])
+            +tabs-nav(['Учредительные', 'Нормативные', 'Внутренние'], 0, ['one', 'two', 'three'])
+                +tabs-content(true, 'one')
+                +tabs-content(false, 'two')
+                +tabs-content(false, 'three')
 
             +pagination('documents', '../')
 

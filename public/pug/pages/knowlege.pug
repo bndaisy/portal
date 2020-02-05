@@ -18,14 +18,18 @@ block content
     body#knowlege
         +header('/')
         main.knowlege.knowlege--align
-            +tabs(['Видеоуроки', 'Вебинары', 'Презентации'], 0, ['one', 'two', 'three'])
-                +contentCard('../', 'knowlege', 'Видеоурок')
-                +contentCard('../', 'knowlege', 'Презентация')
-                +contentCard('../', 'knowlege', 'Презентация')
-                +contentCard('../', 'knowlege', 'Презентация')
-                +contentCard('../', 'knowlege', 'Презентация')
-                +contentCard('../', 'knowlege', 'Вебинар')
-
+            +tabs-nav(['Видеоуроки', 'Вебинары', 'Презентации'], 0, ['one', 'two', 'three'])
+                +tabs-content(true, 'one')
+                    +contentCard('../', 'knowlege', 'Видеоурок')
+                    +contentCard('../', 'knowlege', 'Видеоурок')
+                    +contentCard('../', 'knowlege', 'Видеоурок')
+                +tabs-content(false, 'two')
+                    +contentCard('../', 'knowlege', 'Вебинар')
+                    +contentCard('../', 'knowlege', 'Вебинар')
+                    +contentCard('../', 'knowlege', 'Вебинар')
+                    +contentCard('../', 'knowlege', 'Вебинар')
+                +tabs-content(false, 'three')
+                    +contentCard('../', 'knowlege', 'Презентация')
             +pagination('knowlege', '../')
 
         script(src='../js/main.js')
