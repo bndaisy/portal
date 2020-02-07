@@ -2,7 +2,7 @@ include icon
 
 mixin document(path, category)
     .document.documents__document
-        span.document__headline Наименование документа
+        h3.document__headline Наименование документа
         case category
             when 'Федеральный'
                 span.document__category.document__category--federal= category

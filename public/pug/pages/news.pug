@@ -1,0 +1,32 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/tabs
+include ../components/pagination
+include ../components/newsCard
+
+block title
+    title Портал Моя работа - Новости
+
+block links
+    link(rel='stylesheet', href='../css/main.css')
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    
+block content
+    body#news
+        +header('/')
+        main.news.news--align
+            +tabs-nav(['Новости', 'СМИ о нас', 'Новости Департамента', 'Истории', 'Будь в курсе'], 0, ['one', 'two', 'three', 'four', 'five'])
+                +tabs-content(true, 'one')
+                    +newsCard('s', false, '../')
+                    +newsCard('m', false, '../')
+                +tabs-content(false, 'two')
+                +tabs-content(false, 'three')
+                +tabs-content(false, 'four')
+                +tabs-content(false, 'five')
+
+            +pagination('documents', '../')
+
+        script(src='../js/main.js')
+        script(src='../js/tabs.js')

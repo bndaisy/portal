@@ -57,15 +57,6 @@
             margin-right: 0.25rem
         &.is-active
             border-bottom: 2px solid $palette__primary-accent
-    &--pagination-double-prev,
-    &--pagination-double-next,
-    &--pagination-prev,
-    &--pagination-next
-        padding: 0.5rem 0.75rem
-        +flex-center
-        border-radius: $border-radius
-        border: 1px solid $palette__primary
-        margin: 0 0.25rem
       
     &--close
         display: block
@@ -94,6 +85,23 @@
             background-color: $palette__secondary-lighten
             display: block
             transition: $fast
+            
+.birth-collegue,
+.new-collegue,
+.knowlege,
+.documents,
+.news
+    .btn
+        &--pagination-double-prev,
+        &--pagination-double-next,
+        &--pagination-prev,
+        &--pagination-next
+            padding: 0.5rem 0.75rem
+            +flex-center
+            border-radius: $border-radius
+            border: 1px solid $palette__primary
+            margin: 0 0.25rem
+
 .location-popup
     .btn
         &--close

@@ -1,0 +1,28 @@
+mixin newsCard(size, category, path)
+    case size
+        when 's'
+            figure.news-card.news__news-card.news-card--s
+                .news-card__img-wrapper
+                    img.news-card__img(src='' + path + 'img/news/prev/news__prev.jpg', alt='Prev')
+                figcaption.news-card__desc.news-card__desc--s
+                    time.news-card__date 27 февраля
+                    h3.news-card__headline.news-card__headline--s Заголовок новости
+                    p.news-card__textline.news-card__textline--s Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, illum quas accusamus labore delectus in consequuntur eaque sit atque error.
+                a.news-card__wrapper(href='#')
+        when 'm'
+            figure.news-card.news__news-card.news-card--m
+                .news-card__img-wrapper
+                    img.news-card__img(src='' + path + 'img/news/prev/news__prev.jpg', alt='Prev')
+                figcaption.news-card__desc.news-card__desc--m
+                    case category
+                        when 'Федеральный'
+                            span.news-card__category.news-card__category--federal= category
+                        when 'Московский'
+                            span.news-card__category.news-card__category--moscow= category
+                        when 'Департамента'
+                            span.news-card__category.news-card__category--departament= category
+                        when 'Внутренний'
+                            span.news-card__category.news-card__category--inner= category
+                    h3.news-card__headline.news-card__headline--m Заголовок новости
+                    p.news-card__textline.news-card__textline--m Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ipsa reprehenderit dicta atque soluta maiores distinctio molestiae! Unde, omnis! Minima!1rem
+                a.news-card__wrapper(href='#')
