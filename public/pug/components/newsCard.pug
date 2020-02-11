@@ -14,15 +14,8 @@ mixin newsCard(size, category, path)
                 .news-card__img-wrapper
                     img.news-card__img(src='' + path + 'img/news/prev/news__prev.jpg', alt='Prev')
                 figcaption.news-card__desc.news-card__desc--m
-                    case category
-                        when 'Федеральный'
-                            span.news-card__category.news-card__category--federal= category
-                        when 'Московский'
-                            span.news-card__category.news-card__category--moscow= category
-                        when 'Департамента'
-                            span.news-card__category.news-card__category--departament= category
-                        when 'Внутренний'
-                            span.news-card__category.news-card__category--inner= category
+                    if(category)
+                        span.news-card__category= category
                     h3.news-card__headline.news-card__headline--m Заголовок новости
                     p.news-card__textline.news-card__textline--m Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ipsa reprehenderit dicta atque soluta maiores distinctio molestiae! Unde, omnis! Minima!1rem
                 a.news-card__wrapper(href='#')
