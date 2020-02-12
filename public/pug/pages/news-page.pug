@@ -1,0 +1,28 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/tabs
+include ../components/pagination
+include ../components/breadcrumbs
+
+block title
+    title Портал Моя работа - Новость
+
+block links
+    link(rel='stylesheet', href='../css/main.css')
+    // Favicon
+    link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    
+block content
+    body#news-page
+        +header('/')
+        main.news-page.news-page--align
+            +breadcrumbs(['Новости', 'Название новости'], ['pages/news.html', 'pages/news-page.html'], 'news-page', '../')
+            section
+                .container
+                    .news-page__content
+                    aside.news-page__another-news
+            +pagination('documents', '../')
+
+        script(src='../js/main.js')
+        script(src='../js/tabs.js')

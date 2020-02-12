@@ -1,0 +1,34 @@
+.news-page
+    &__breadcrumbs
+        margin: 2rem 0 
+        
+    .breadcrumbs
+        .container
+            margin: 0 0.5rem
+        &__list
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+        &__item
+            &:not(:last-of-type)
+                margin-right: 0.5rem
+        &__link
+            +textline($palette__secondary, $headline, none)
+
+@media all and (min-width: 360px)
+    .news-page
+        .breadcrumbs
+            .container
+                margin: 0 1rem
+@media all and (min-width: 1024px)
+    .news-page
+        .breadcrumbs
+            &__link
+                transition: $fast
+                &:hover
+                    color: $palette__primary
+@media all and (min-width: 1280px)
+    .news-page
+        .breadcrumbs
+            .container
+                margin: 0 auto

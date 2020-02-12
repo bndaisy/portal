@@ -8,7 +8,7 @@ mixin newsCard(size, category, path)
                     time.news-card__date 27 февраля
                     h3.news-card__headline.news-card__headline--s Заголовок новости
                     p.news-card__textline.news-card__textline--s Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, illum quas accusamus labore delectus in consequuntur eaque sit atque error.
-                a.news-card__wrapper(href='#')
+                a.news-card__wrapper(href='' + path + 'pages/news-page.html')
         when 'm'
             figure.news-card.news__news-card.news-card--m
                 .news-card__img-wrapper
@@ -18,4 +18,4 @@ mixin newsCard(size, category, path)
                         span.news-card__category= category
                     h3.news-card__headline.news-card__headline--m Заголовок новости
                     p.news-card__textline.news-card__textline--m Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ipsa reprehenderit dicta atque soluta maiores distinctio molestiae! Unde, omnis! Minima!1rem
-                a.news-card__wrapper(href='#')
+                a.news-card__wrapper(href='' + path + 'pages/news-page.html')

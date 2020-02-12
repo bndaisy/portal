@@ -1,0 +1,13 @@
+include icon
+
+mixin breadcrumbs(arrayNav, arrayLinks, classNav, path)
+    nav.breadcrumbs(class='' + classNav + '__breadcrumbs')
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href=''+ path +'pages/main.html') Главная
+                - for(let i = 0; i < arrayNav.length; i++)
+                    li.breadcrumbs__item
+                        +icon(path, 'chevron-right')
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href='' + path + arrayLinks[i])= arrayNav[i]
