@@ -18,10 +18,10 @@ block content
         +header('/')
         main.news-page.news-page--align
             +breadcrumbs(['Новости', 'Название новости'], ['pages/news.html', 'pages/news-page.html'], 'news-page', '../')
-            section
+            section.news-page__content
                 .container
-                    .news-page__content
-                    aside.news-page__another-news
+                    .news-page__holder
+                    aside.news-page__sidebar
             +pagination('documents', '../')
 
         script(src='../js/main.js')
