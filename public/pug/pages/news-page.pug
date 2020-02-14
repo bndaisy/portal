@@ -12,6 +12,9 @@ block links
     link(rel='stylesheet', href='../css/main.css')
     // Favicon
     link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+    // Slick slider CDN
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css')
     
 block content
     body#news-page
@@ -21,8 +24,39 @@ block content
             section.news-page__content
                 .container
                     .news-page__holder
-                    aside.news-page__sidebar
-            +pagination('documents', '../')
+                        h1.news-page__headline Название новости
+                        .slider.news-page__slider
+                            .slider__body
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-01.jpeg', alt='Img')
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-02.jpg', alt='Img')
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-03.jpg', alt='Img')
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-04.jpg', alt='Img')
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-01.jpeg', alt='Img')
+                                img.slider__body-item(src='../../img/news/news-page/slider__img-05.jpeg', alt='Img')
+                            .slider__nav
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-01.jpeg', alt='Img')
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-02.jpg', alt='Img')
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-03.jpg', alt='Img')
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-04.jpg', alt='Img')
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-01.jpeg', alt='Img')
+                                img.slider__nav-item(src='../../img/news/news-page/slider__img-05.jpeg', alt='Img')
+                        h2.news-page__subheadline Подзаголовок Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem necessitatibus inventore cumque natus modi? Dignissimos iure nisi aperiam deleniti, voluptatibus, vel quo enim dolore, repudiandae amet obcaecati error iste.
+                        p.news-page__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur quibusdam dolore, reiciendis quasi quo perspiciatis qui quaerat dolores fugit maiores illum accusantium, asperiores voluptatibus. Quis, nisi eum dolorem, corrupti sit quisquam sint enim ullam iure eveniet rerum hic magni facilis perspiciatis laudantium. Quibusdam, nulla! Minus totam mollitia dolorum asperiores eos qui enim accusantium quam id fugit laborum labore iure eligendi hic consequatur, explicabo quos atque eveniet! Optio expedita assumenda nam doloribus, repudiandae maiores ullam laboriosam molestias iure architecto sapiente pariatur cumque eius esse aut. Ducimus officiis aliquam quae cumque deserunt aspernatur nam nostrum nemo magnam repudiandae, assumenda, nesciunt dicta. Ullam eum aliquam placeat accusamus sit, minima illum dolores dignissimos, nobis dolor ratione rem cumque commodi beatae quis aut, perferendis harum aliquid explicabo quo blanditiis asperiores laboriosam. Non cumque magni magnam sapiente optio, nostrum veniam facere fugiat! Rerum similique commodi velit et ipsum, omnis a fuga quos, recusandae veritatis deleniti laboriosam quasi, inventore sunt reprehenderit unde temporibus mollitia illo vel? Neque numquam voluptate unde doloremque soluta earum, incidunt esse dignissimos. Temporibus omnis in hic, nemo ipsa a officia amet repellat saepe incidunt, molestiae corrupti atque recusandae nesciunt eaque perferendis voluptatum? Molestiae minus placeat quibusdam voluptatem autem dolore quos aspernatur dolores.
+                    aside.sidebar.news-page__sidebar
+                        h2.sidebar__headline Это может быть интересно
+                        a.sidebar__holder(href='#')
+                            h3.sidebar__subheadline Название новости
+                            p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
+                        a.sidebar__holder(href='#')
+                            h3.sidebar__subheadline Название новости
+                            p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
+                        a.sidebar__holder(href='#')
+                            h3.sidebar__subheadline Название новости
+                            p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
 
         script(src='../js/main.js')
-        script(src='../js/tabs.js')
+        // JQuery CDN
+        script(src='//code.jquery.com/jquery-3.4.1.min.js')
+        // Slick slider CDN
+        script(src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+        script(src='../js/news-slick.js')

@@ -12,4 +12,64 @@
         padding: 2rem 0
     .container
         display: grid
-        grid-template-columns: 1fr minmax(min-content, max-content)
+        grid-template-columns: 1fr 300px
+        margin: 0 auto
+        column-gap: 2rem
+    &__headline
+        +textline($palette__primary, $headline*1.5, uppercase)
+        font-weight: bolder
+        margin-bottom: 1rem
+    &__subheadline
+        +textline($palette__primary, $subheadline*1.5, uppercase)
+        margin-bottom: 1rem
+    &__text
+        +textline($palette__secondary-darken, $subheadline, none)
+    &__slider
+        max-width: 948px
+        margin-bottom: 2rem
+    .slider
+        &__body
+            overflow: hidden
+            margin-bottom: 1rem
+        &__body-item
+            max-width: 100%
+            height: 500px
+            object-fit: cover
+        &__nav-item
+            max-width: 200px
+            height: 70px
+            object-fit: cover
+            margin-right: 0.5rem
+            border: 1px solid transparent
+        
+    .sidebar
+        &__holder
+            padding: 0.5rem
+            border-bottom: 1px solid $palette__secondary-darken
+            display: block
+        &__headline
+            +textline($palette__primary, $headline, uppercase)
+            margin-bottom: 0.5rem
+            margin-left: 0.5rem
+            font-weight: bolder
+        &__subheadline
+            +textline($palette__primary, $subheadline, uppercase)
+            margin: 0.5rem 0
+            font-weight: bolder
+        &__desc
+            +textline($palette__secondary-darken, $textline, none)
+
+@media all and (min-width: 1024px)
+    .news-page
+        .sidebar
+            &__holder
+                transition: $fast
+                &:hover
+                    background-color: darken($palette__foreground, 2%)
+        .slider
+            &__nav-item
+                transition: $fast
+                &:hover
+                    cursor: pointer
+                    border: 1px solid $palette__primary-accent
+        
