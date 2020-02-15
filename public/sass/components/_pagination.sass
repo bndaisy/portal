@@ -3,8 +3,7 @@
 .birth-collegue,
 .knowlege,
 .documents,
-.news,
-.news-page
+.news
     &__pagination
         +flex-center
         margin: 2rem 0
@@ -20,3 +19,8 @@
         &__num
             +textline($palette__primary, $headline, none)
             margin: 0 0.25rem
+.news-page
+    &__pagination
+        display: flex
+        justify-content: flex-end
+        margin: 2rem 0

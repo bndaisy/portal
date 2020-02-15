@@ -90,8 +90,7 @@
 .new-collegue,
 .knowlege,
 .documents,
-.news,
-.news-page
+.news
     .btn
         &--pagination-double-prev,
         &--pagination-double-next,
@@ -101,6 +100,15 @@
             +flex-center
             border-radius: $border-radius
             border: 1px solid $palette__primary
+            margin: 0 0.25rem
+.news-page
+    .btn
+        &--pagination-prev,
+        &--pagination-next
+            padding: 0.5rem 0.75rem
+            +flex-center
+            border-radius: $border-radius
+            border: 1px solid $palette__secondary-darken
             margin: 0 0.25rem
 
 .location-popup
@@ -165,7 +173,17 @@
                 &::after
                    background-color: $palette__primary
                 &::before
-                   background-color: $palette__primary  
+                   background-color: $palette__primary
+    .news-page
+        .btn
+            &--pagination-prev,
+            &--pagination-next
+                transition: $fast
+                &:hover
+                    cursor: pointer
+                    background-color: $palette__secondary-darken
+                    .icon
+                        fill: $palette__background  
     .location-popup
         .btn
             &--close
