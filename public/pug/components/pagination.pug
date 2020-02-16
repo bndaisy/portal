@@ -1,15 +1,20 @@
 include icon
 
-mixin pagination(cls, path)
+mixin pagination(cls, path, left, right, doubleLeft, doubleRight, middle)
     form.pagination(class='' + cls + '__pagination')
-        button.btn.btn--pagination-double-prev
-            +icon(path, 'chevron-double-left')
-        button.btn.btn--pagination-prev
-            +icon(path, 'chevron-left')
-        input(type='text').pagination__input
-        span.pagination__text из
-        span.pagination__num 67
-        button.btn.btn--pagination-next
-            +icon(path, 'chevron-double-right')
-        button.btn.btn--pagination-double-next
-            +icon(path, 'chevron-right')
+        if(doubleLeft)
+            button.btn.btn--pagination-double-prev
+                +icon(path, 'chevron-double-left')
+        if(left)
+            button.btn.btn--pagination-prev
+                +icon(path, 'chevron-left')
+        if(middle)
+            input(type='text').pagination__input
+            span.pagination__text из
+            span.pagination__num 67
+        if(right)
+            button.btn.btn--pagination-next
+                +icon(path, 'chevron-right')
+        if(doubleRight)
+            button.btn.btn--pagination-double-next
+                +icon(path, 'chevron-double-right')
