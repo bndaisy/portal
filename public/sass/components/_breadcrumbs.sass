@@ -1,4 +1,5 @@
-.news-page
+.news-page,
+.knowlege-page
     &__breadcrumbs
         margin: 2rem 0 1rem
         
@@ -16,19 +17,22 @@
             +textline($palette__secondary, $headline, none)
 
 @media all and (min-width: 360px)
-    .news-page
+    .news-page,
+    .knowlege-page
         .breadcrumbs
             .container
                 margin: 0 1rem
 @media all and (min-width: 1024px)
-    .news-page
+    .news-page,
+    .knowlege-page
         .breadcrumbs
             &__link
                 transition: $fast
                 &:hover
                     color: $palette__primary
 @media all and (min-width: 1280px)
-    .news-page
+    .news-page,
+    .knowlege-page
         .breadcrumbs
             .container
                 margin: 0 auto

@@ -7,6 +7,7 @@
         border-radius: $border-radius
         border: 2px solid transparent
         height: 20.5rem
+        position: relative
         &__iframe
             width: 100%
             height: 12.5rem
@@ -17,6 +18,40 @@
         &__text
             +textline($palette__primary, $subheadline, none)
             margin: 0 1rem
+        &__link
+            position: absolute
+            height: 7.75rem
+            left: 0
+            bottom: 0
+            right: 0
+            display: block
+.knowlege-page
+    .content-card
+        display: grid
+        grid-template-columns: auto
+        grid-template-rows: 10rem minmax(min-content, max-content) 1fr minmax(min-content, max-content)
+        overflow: hidden
+        height: 17rem
+        position: relative
+        margin-bottom: 1rem
+        &__iframe
+            width: 100%
+            height: 10rem
+        &__headline
+            +textline($palette__primary, $headline, uppercase)
+            font-weight: bolder
+            margin: 1rem 0.5rem
+        &__text
+            +textline($palette__primary, $subheadline, none)
+            margin: 0 0.5rem
+        &__link
+            position: absolute
+            height: 7.75rem
+            left: 0
+            bottom: 0
+            right: 0
+            display: block
+
 
 @media all and (min-width: 1024px)
     .knowlege
@@ -25,3 +60,8 @@
             &:hover
                 border: 2px solid $palette__secondary-accent
                 box-shadow: $shadow-lighten
+    .knowlege-page
+        .content-card
+            transition: $fast
+            &:hover
+                background-color: darken($palette__foreground, 2%)

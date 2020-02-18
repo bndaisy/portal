@@ -1,0 +1,27 @@
+#knowlege-page
+    display: grid
+    grid-template-rows: minmax(min-content, max-content) 1fr
+    min-height: 100vh
+
+.knowlege-page
+    &--align
+        display: grid
+        grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content)
+    &__content
+        background-color: $palette__foreground
+        padding: 2rem 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 300px
+        margin: 0 auto
+        column-gap: 2rem
+    &__headline
+        +textline($palette__primary, $headline*1.5, uppercase)
+        font-weight: bolder
+        margin-bottom: 1rem
+    &__text
+        +textline($palette__secondary-darken, $subheadline, none)
+    &__iframe
+        margin-bottom: 2rem
+        height: 500px
+        width: 100%

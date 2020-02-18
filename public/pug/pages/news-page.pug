@@ -1,7 +1,6 @@
 extends ../layout/head
 include ../templates/header
 include ../components/icon
-include ../components/tabs
 include ../components/pagination
 include ../components/breadcrumbs
 
@@ -42,21 +41,21 @@ block content
                                 img.slider__nav-item(src='../../img/news/news-page/slider__img-05.jpeg', alt='Img')
                         h2.news-page__subheadline Подзаголовок Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem necessitatibus inventore cumque natus modi? Dignissimos iure nisi aperiam deleniti, voluptatibus, vel quo enim dolore, repudiandae amet obcaecati error iste.
                         p.news-page__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur quibusdam dolore, reiciendis quasi quo perspiciatis qui quaerat dolores fugit maiores illum accusantium, asperiores voluptatibus. Quis, nisi eum dolorem, corrupti sit quisquam sint enim ullam iure eveniet rerum hic magni facilis perspiciatis laudantium. Quibusdam, nulla! Minus totam mollitia dolorum asperiores eos qui enim accusantium quam id fugit laborum labore iure eligendi hic consequatur, explicabo quos atque eveniet! Optio expedita assumenda nam doloribus, repudiandae maiores ullam laboriosam molestias iure architecto sapiente pariatur cumque eius esse aut. Ducimus officiis aliquam quae cumque deserunt aspernatur nam nostrum nemo magnam repudiandae, assumenda, nesciunt dicta. Ullam eum aliquam placeat accusamus sit, minima illum dolores dignissimos, nobis dolor ratione rem cumque commodi beatae quis aut, perferendis harum aliquid explicabo quo blanditiis asperiores laboriosam. Non cumque magni magnam sapiente optio, nostrum veniam facere fugiat! Rerum similique commodi velit et ipsum, omnis a fuga quos, recusandae veritatis deleniti laboriosam quasi, inventore sunt reprehenderit unde temporibus mollitia illo vel? Neque numquam voluptate unde doloremque soluta earum, incidunt esse dignissimos. Temporibus omnis in hic, nemo ipsa a officia amet repellat saepe incidunt, molestiae corrupti atque recusandae nesciunt eaque perferendis voluptatum? Molestiae minus placeat quibusdam voluptatem autem dolore quos aspernatur dolores.
-                        
-                        // Сделать универсальный миксин пагинации и закинуть туда
                         +pagination('news-page', '../', true, true, false, false, false)
                     aside.sidebar.news-page__sidebar
                         h2.sidebar__headline Это может быть интересно
-                        a.sidebar__holder(href='#')
+                        .sidebar__holder
                             h3.sidebar__subheadline Название новости
                             p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
-                        a.sidebar__holder(href='#')
+                            a.sidebar__link(href='#')
+                        .sidebar__holder
                             h3.sidebar__subheadline Название новости
                             p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
-                        a.sidebar__holder(href='#')
+                            a.sidebar__link(href='#')
+                        .sidebar__holder
                             h3.sidebar__subheadline Название новости
                             p.sidebar__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, doloremque aspernatur! Voluptate eius nemo debitis.
-
+                            a.sidebar__link(href='#')
         script(src='../js/main.js')
         // JQuery CDN
         script(src='//code.jquery.com/jquery-3.4.1.min.js')

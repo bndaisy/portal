@@ -1,0 +1,41 @@
+.news-page
+    .sidebar
+        &__holder
+            padding: 0.5rem
+            border-bottom: 1px solid $palette__secondary-darken
+            display: block
+            position: relative
+        &__headline
+            +textline($palette__primary, $headline, uppercase)
+            margin-bottom: 0.5rem
+            margin-left: 0.5rem
+            font-weight: bolder
+        &__subheadline
+            +textline($palette__primary, $subheadline, uppercase)
+            margin: 0.5rem 0
+            font-weight: bolder
+        &__desc
+            +textline($palette__secondary-darken, $textline, none)
+        &__link
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            display: block
+.knowlege-page
+    &__sidebar
+        padding: 0.5rem
+    .sidebar
+        &__headline
+            +textline($palette__primary, $headline, uppercase)
+            margin-bottom: 1rem
+            font-weight: bolder
+
+@media all and (min-width: 1024px)
+    .news-page
+        .sidebar
+            &__link
+                transition: $fast
+                &:hover
+                    background-color: darken($palette__foreground, 2%)
