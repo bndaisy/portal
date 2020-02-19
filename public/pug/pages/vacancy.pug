@@ -1,0 +1,26 @@
+extends ../layout/head
+include ../templates/header
+include ../components/icon
+include ../components/pagination
+include ../components/tabs
+
+block title
+	title Портал Моя работа - Вакансии
+
+block links
+	link(rel='stylesheet', href='../css/main.css')
+	// Favicon
+	link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+block content
+	body#vacancy
+		+header('/')
+		main.vacancy.vacancy--align
+			+tabs-nav(['Вакансии', 'Профобучение', 'Тестирование', 'Тренинги'], 0, ['one', 'two', 'three', 'four'])
+				+tabs-content(true, 'one')
+				+tabs-content(false, 'two')
+				+tabs-content(false, 'three')
+				+tabs-content(false, 'four')
+			+pagination('vacancy', '../', true, true, true, true, true)
+
+		script(src='../js/main.js')
+		script(src='../js/tabs.js')

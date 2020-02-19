@@ -1,5 +1,5 @@
 mixin tabs-nav(arrNav, isActive, arrCls)
-    .tabs
+    section.tabs
         .tabs-nav
             .container
                 - for(let i = 0; i < arrNav.length; i++)
@@ -7,7 +7,7 @@ mixin tabs-nav(arrNav, isActive, arrCls)
                         .tabs-nav__item(data-tab-name = 'tab__' + arrCls[i]).is-active= arrNav[i]
                     else
                         .tabs-nav__item(data-tab-name = 'tab__' + arrCls[i])= arrNav[i]
-        .tabs-content
+    section.tabs-content
             .container
                 block
 
