@@ -126,7 +126,18 @@
             &:not(:last-of-type)
                 margin-right: 0.75rem
 
-                
+.vacancy
+    .btn
+        &--pagination-double-prev,
+        &--pagination-double-next,
+        &--pagination-prev,
+        &--pagination-next
+            padding: 0.5rem 0.75rem
+            +flex-center
+            border-radius: $border-radius
+            border: 1px solid $palette__background-dark
+            margin: 0 0.25rem      
+
 @media all and (min-width: 768px)
     .btn
         &--primary
@@ -193,3 +204,15 @@
                     &::after,
                     &::before
                         background-color: $palette__secondary-lighten
+    .vacancy
+        .btn
+            &--pagination-double-prev,
+            &--pagination-double-next,
+            &--pagination-prev,
+            &--pagination-next
+                transition: $fast
+                &:hover
+                    cursor: pointer
+                    background-color: $palette__background-dark
+                    .icon
+                        fill: $palette__background-light

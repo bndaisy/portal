@@ -66,7 +66,34 @@
     .tabs-content
         &__item
             grid-auto-rows: 140px
-            
+
+.vacancy
+    .tabs
+        display: grid
+        grid-template-rows: minmax(min-content, max-content) 1fr
+    .tabs-nav
+        background-color: $palette__background-dark
+        .container
+            display: flex
+            flex-wrap: wrap
+            padding: 0.5rem
+        &__item
+            padding: 0.25rem 0.5rem
+            +textline($palette__background-light, $textline, uppercase)
+            font-weight: bolder
+            margin: 0.125rem 0
+            border-radius: $border-radius
+            &:not(:last-of-type)
+                margin-right: 1rem
+            &.is-active
+                background-color: $palette__background-light
+                color: $palette__background-dark
+    .tabs-content
+        background-color: $palette__background-light
+        padding: 1rem 0
+        .container
+            margin: 0 auto 
+
 @media all and (min-width: 400px)
     .news
         .tabs-content
@@ -123,7 +150,15 @@
                 margin: 0 auto
             &__item
                 grid-template-columns: repeat(10, 1fr) 
-
+    .vacancy
+        .tabs-nav
+            &__item
+                font-size: $headline
+                transition: $fast
+                &:hover
+                    cursor: pointer
+                    background-color: $palette__background-light
+                    color: $palette__background-dark
 
 @media all and (min-width: 1280px)
     .knowlege,
@@ -153,6 +188,11 @@
         .tabs-nav
             .container
                 margin: 2rem auto 1rem
+    
+    .vacancy
+        .tabs-nav
+            .container
+                margin: 1rem auto
 
 
 
