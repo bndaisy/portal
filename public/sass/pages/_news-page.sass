@@ -44,23 +44,6 @@
             object-fit: cover
             margin-right: 0.5rem
             border: 1px solid transparent
-        
-    .sidebar
-        &__holder
-            padding: 0.5rem
-            border-bottom: 1px solid $palette__secondary-darken
-            display: block
-        &__headline
-            +textline($palette__primary, $headline, uppercase)
-            margin-bottom: 0.5rem
-            margin-left: 0.5rem
-            font-weight: bolder
-        &__subheadline
-            +textline($palette__primary, $subheadline, uppercase)
-            margin: 0.5rem 0
-            font-weight: bolder
-        &__desc
-            +textline($palette__secondary-darken, $textline, none)
 
 @media all and (min-width: 360px)
     .news-page
@@ -102,11 +85,7 @@
         .container
             grid-template-columns: 1fr 300px
             column-gap: 1rem
-        .sidebar
-            &__holder
-                transition: $fast
-                &:hover
-                    background-color: darken($palette__foreground, 2%)
+
         .slider
             &__nav-item
                 transition: $fast

@@ -1,4 +1,7 @@
 .news-page
+    &__sidebar
+        display: grid
+        grid-auto-rows: minmax(min-content, max-content)
     .sidebar
         &__holder
             padding: 0.5rem
@@ -7,9 +10,10 @@
             position: relative
         &__headline
             +textline($palette__primary, $headline, uppercase)
-            margin-bottom: 0.5rem
             margin-left: 0.5rem
             font-weight: bolder
+            grid-column: 1
+            grid-row: 1
         &__subheadline
             +textline($palette__primary, $subheadline, uppercase)
             margin: 0.5rem 0
@@ -63,6 +67,12 @@
             .content-card
                 &__iframe
                     height: 280px
+    .news-page
+        &__sidebar
+            column-gap: 1rem
+        .sidebar
+            &__headline
+                grid-column: span 2
 
 @media all and (min-width: 520px)
     .knowlege-page
@@ -118,6 +128,10 @@
             .content-card
                 &__iframe
                     height: 240px
+    .news-page
+        .sidebar
+            &__headline
+                grid-column: span 3
 
 @media all and (min-width: 800px)
     .knowlege-page
@@ -143,10 +157,14 @@
 @media all and (min-width: 1024px)
     .news-page
         .sidebar
-            &__link
+            &__holder
                 transition: $fast
                 &:hover
                     background-color: darken($palette__foreground, 2%)
+
+            &__headline
+                grid-column: 1
+                margin-bottom: 0.5rem
 
     .knowlege-page
         &__content
