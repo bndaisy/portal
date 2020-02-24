@@ -9,35 +9,38 @@
         grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content)
     &__content
         background-color: $palette__foreground
-        padding: 2rem 0
+        padding: 1.5rem 0
     .container
         display: grid
-        grid-template-columns: 1fr 300px
-        margin: 0 auto
-        column-gap: 2rem
+        grid-template-columns: 1fr 
+        row-gap: 1rem
+        margin: 0 0.5rem
     &__headline
-        +textline($palette__primary, $headline*1.5, uppercase)
+        +textline($palette__primary, $headline*1.2, uppercase)
         font-weight: bolder
         margin-bottom: 1rem
     &__subheadline
-        +textline($palette__primary, $subheadline*1.5, uppercase)
-        margin-bottom: 1rem
+        +textline($palette__primary, $subheadline*1.2, uppercase)
+        margin-bottom: 0.5rem
     &__text
         +textline($palette__secondary-darken, $subheadline, none)
+    &__holder
+        width: calc(100vw - 1rem)
     &__slider
-        max-width: 948px
-        margin-bottom: 2rem
+        width: 100%
+        margin-bottom: 1rem
     .slider
         &__body
             overflow: hidden
-            margin-bottom: 1rem
+            margin-bottom: 0.5rem
         &__body-item
-            max-width: 100%
-            height: 500px
+            width: 100%
+            height: calc(70vw - 2rem)
+            max-height: 500px
             object-fit: cover
         &__nav-item
-            max-width: 200px
-            height: 70px
+            max-width: 100px
+            height: 50px
             object-fit: cover
             margin-right: 0.5rem
             border: 1px solid transparent
@@ -59,8 +62,46 @@
         &__desc
             +textline($palette__secondary-darken, $textline, none)
 
+@media all and (min-width: 360px)
+    .news-page
+        .container
+            margin: 0 1rem
+        &__holder
+            width: calc(100vw - 2rem)
+
+@media all and (min-width: 480px)
+    .news-page
+        &__content
+            padding: 2rem 0
+        &__headline
+            font-size: $headline*1.5
+        &__subheadline
+            font-size: $subheadline*1.5
+        &__slider
+            margin-bottom: 2rem
+        .slider
+            &__nav-item
+                max-width: 150px
+                height: 70px
+
+@media all and (min-width: 760px)
+    .news-page
+        &__content
+            padding: 2rem 0
+        .slider
+            &__body
+                margin-bottom: 1rem
+            &__nav-item
+                max-width: 200px
+
 @media all and (min-width: 1024px)
     .news-page
+        &__holder
+            width: calc(100vw - 300px - 3rem)
+            max-width: 948px
+        .container
+            grid-template-columns: 1fr 300px
+            column-gap: 1rem
         .sidebar
             &__holder
                 transition: $fast
@@ -72,4 +113,9 @@
                 &:hover
                     cursor: pointer
                     border: 1px solid $palette__primary-accent
-        
+
+@media all and (min-width: 1280px)
+    .news-page
+        .container
+            column-gap: 2rem
+            margin: 0 auto     
