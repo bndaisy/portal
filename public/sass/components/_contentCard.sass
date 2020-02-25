@@ -1,30 +1,4 @@
-.knowlege
-    .content-card
-        display: grid
-        grid-template-columns: auto
-        grid-template-rows: 12.5rem minmax(min-content, max-content) 1fr minmax(min-content, max-content)
-        overflow: hidden
-        border-radius: $border-radius
-        border: 2px solid transparent
-        height: 20.5rem
-        position: relative
-        &__iframe
-            width: 100%
-            height: 12.5rem
-        &__headline
-            +textline($palette__primary, $headline, uppercase)
-            font-weight: bolder
-            margin: 1rem
-        &__text
-            +textline($palette__primary, $subheadline, none)
-            margin: 0 1rem
-        &__link
-            position: absolute
-            height: 7.75rem
-            left: 0
-            bottom: 0
-            right: 0
-            display: block
+.knowlege,
 .knowlege-page
     &__content-card
         display: grid
@@ -51,16 +25,122 @@
             right: 0
             display: block
 
-
-@media all and (min-width: 1024px)
+@media all and (min-width: 360px)
+    .knowlege-page,
     .knowlege
         .content-card
-            transition: $fast
-            &:hover
-                border: 2px solid $palette__secondary-accent
-                box-shadow: $shadow-lighten
+            &__iframe
+                height: 220px
+
+@media all and (min-width: 400px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 240px
+
+@media all and (min-width: 440px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 260px
+
+@media all and (min-width: 480px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 280px
+
+@media all and (min-width: 520px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 300px
+
+@media all and (min-width: 560px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 320px
+
+@media all and (min-width: 600px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 360px
+
+@media all and (min-width: 640px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 380px
+
+@media all and (min-width: 680px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 200px
+
+@media all and (min-width: 720px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 220px
+
+@media all and (min-width: 760px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 240px
+
+@media all and (min-width: 800px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 260px
+
+@media all and (min-width: 840px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 280px
+
+@media all and (min-width: 880px)
+    .knowlege-page,
+    .knowlege
+        .content-card
+            &__iframe
+                height: 300px
+
+@media all and (min-width: 1024px)
+    .knowlege,
     .knowlege-page
         .content-card
             transition: $fast
+            &__iframe
+                height: 200px
+
+    .knowlege-page
+        .content-card
             &:hover
                 background-color: darken($palette__foreground, 2%)
+    .knowlege
+        .content-card
+            &:hover
+                border: 2px solid $palette__secondary-accent
+                box-shadow: $shadow-lighten
+
+
+
+
