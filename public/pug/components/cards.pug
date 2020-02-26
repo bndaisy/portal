@@ -14,6 +14,21 @@ mixin userCard(cls, path)
         span.user-card__departament Отдел эксплуатации автоматизированных систем
         span.user-card__position Заместитель начальника отдела
 
+mixin vacancyCard(cls, path)
+    .vacancy-card(class = '' + cls + '__vacancy-card')
+        span.vacancy__headline Название вакансии
+        span.vacancy__wage 11 111 - 11 111
+        span.vacancy__description Описание вакансии
+        a.vacancy__link(href='#')
+        a.vacancy__icon-link(href='#')
+            +icon(path, 'school')
+        a.vacancy__icon-link(href='#')
+            +icon(path, 'invalid')
+        a.vacancy__icon-link(href='#')
+            +icon(path, 'correct')
+        a.vacancy__icon-link(href='#')
+            +icon(path, 'delete')      
+
 mixin contentCard(path, cls, type)
     .content-card(class = '' + cls + '__content-card')
         if(type == 'Видеоурок')
