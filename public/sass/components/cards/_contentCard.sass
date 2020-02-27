@@ -2,126 +2,123 @@
 .knowlege-page
     &__content-card
         display: grid
-        grid-template-columns: auto
-        grid-template-rows: repeat(2, minmax(min-content, max-content)) 1fr minmax(min-content, max-content)
+        grid-template-rows: repeat(2, minmax(min-content, max-content))
         overflow: hidden
-        height: auto
-        position: relative
     .content-card
         &__iframe
             width: 100%
+            height: 180px
         &__headline
             +textline($palette__primary, $headline, uppercase)
             font-weight: bolder
             margin: 1rem 0.5rem
-        &__text
+        &__textline
             +textline($palette__primary, $subheadline, none)
-            margin: 0 0.5rem
-        &__link
-            position: absolute
-            height: 7.75rem
-            left: 0
-            bottom: 0
-            right: 0
-            display: block
+            margin: 0 0.5rem 1rem
+
+.knowlege
+    &__content-card
+        border: 2px solid transparent
+        border-radius: $border-radius
+
 
 @media all and (min-width: 360px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 220px
+                height: 200px
 
 @media all and (min-width: 400px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 240px
+                height: 220px
 
 @media all and (min-width: 440px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 260px
+                height: 240px
 
 @media all and (min-width: 480px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 280px
+                height: 260px
 
 @media all and (min-width: 520px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 300px
+                height: 280px
 
 @media all and (min-width: 560px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 320px
+                height: 300px
 
 @media all and (min-width: 600px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 360px
+                height: 320px
 
 @media all and (min-width: 640px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 380px
+                height: 340px
 
 @media all and (min-width: 680px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 200px
+                height: 180px
 
 @media all and (min-width: 720px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 220px
+                height: 200px
 
 @media all and (min-width: 760px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 240px
+                height: 220px
 
 @media all and (min-width: 800px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 260px
+                height: 240px
 
 @media all and (min-width: 840px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 280px
+                height: 260px
 
 @media all and (min-width: 880px)
     .knowlege-page,
     .knowlege
         .content-card
             &__iframe
-                height: 300px
+                height: 280px
 
 @media all and (min-width: 1024px)
     .knowlege,
@@ -129,7 +126,7 @@
         .content-card
             transition: $fast
             &__iframe
-                height: 200px
+                height: 180px
 
     .knowlege-page
         .content-card
