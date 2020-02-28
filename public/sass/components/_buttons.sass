@@ -136,7 +136,18 @@
             +flex-center
             border-radius: $border-radius
             border: 1px solid $palette__background-dark
-            margin: 0 0.25rem      
+            margin: 0 0.25rem
+        &--vacancy-correct,
+        &--vacancy-delete
+            position: absolute
+            z-index: 2
+        &--vacancy-delete
+            top: 3.25rem
+            right: 1.25rem
+        &--vacancy-correct
+            top: 3.25rem
+            right: 3.25rem
+
 
 @media all and (min-width: 768px)
     .btn
@@ -206,13 +217,20 @@
                         background-color: $palette__secondary-lighten
     .vacancy
         .btn
+            transition: $fast
+            &:hover
+                cursor: pointer
             &--pagination-double-prev,
             &--pagination-double-next,
             &--pagination-prev,
             &--pagination-next
-                transition: $fast
                 &:hover
-                    cursor: pointer
                     background-color: $palette__background-dark
                     .icon
                         fill: $palette__background-light
+            
+            &--vacancy-correct,
+            &--vacancy-delete
+                &:hover
+                    .icon
+                        fill: $palette__primary-accent

@@ -148,12 +148,31 @@
             max-width: 1rem
             max-height: 1rem
             fill: $palette__background-dark
+    .icon
+        &--school,
+        &--invalid
+            position: absolute
+            right: 1rem
+            top: 0
+            max-width: 2rem
+            max-height: 2.75rem
+        &--school
+            fill: $palette__foreground-accent
+        &--invalid
+            fill: $palette__primary-accent
+        &--correct,
+        &--delete
+            max-width: 1.5rem
+            max-height: 1.5rem
+            fill: $palette__secondary
+
 
 @media all and (min-width: 768px)
     .auth
         .icon
             max-width: 1.5rem
             max-height: 1.5rem
+
 @media all and (min-width: 1024px)
     .header
         .icon
@@ -207,6 +226,11 @@
         .pagination
             .icon
                 transition: $fast   
+    .vacancy
+        .icon
+            &--correct,
+            &--delete
+                transition: $fast
 
     .documents
         .icon

@@ -1,0 +1,47 @@
+.vacancy
+    &__vacancy-card
+        background-color: $palette__background
+        border-radius: $border-radius
+        padding: 1rem
+        position: relative
+        display: grid
+        grid-template-rows: repeat(2, minmax(min-content, max-content)) 1fr
+        row-gap: 0.5rem
+    .vacancy-card
+        &__headline
+            +textline($palette__primary, $headline, uppercase)
+            font-weight: bolder
+        &__wage
+            +textline($palette__secondary, $headline, uppercase)
+            margin-bottom: 1rem
+        &__description
+            +textline($palette__secondary, $subheadline, none)
+        &__link
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            display: block
+
+                
+        
+
+@media all and (min-width: 1024px)
+    .vacancy
+        &__vacancy-card
+            transition: $fast
+            &:hover
+                box-shadow: $shadow-lighten
+                background-color: $palette__background-dark
+                .vacancy-card
+                    &__headline,
+                    &__wage,
+                    &__description
+                        color: $palette__background
+                .icon
+                    &--delete,
+                    &--correct
+                        fill: $palette__background
+
+    

@@ -3,6 +3,7 @@ include ../templates/header
 include ../components/icon
 include ../components/pagination
 include ../components/tabs
+include ../components/cards
 
 block title
 	title Портал Моя работа - Вакансии
@@ -17,6 +18,13 @@ block content
 		main.vacancy.vacancy--align
 			+tabs-nav(['Вакансии', 'Профобучение', 'Тестирование', 'Тренинги'], 0, ['one', 'two', 'three', 'four'])
 				+tabs-content(true, 'one')
+					+vacancyCard('../', 'vacancy', 'Инвалиды')
+					+vacancyCard('../', 'vacancy', 'Молодежь')
+					+vacancyCard('../', 'vacancy', 'Молодежь')
+					+vacancyCard('../', 'vacancy')
+					+vacancyCard('../', 'vacancy', 'Молодежь')
+					+vacancyCard('../', 'vacancy')
+					+vacancyCard('../', 'vacancy', 'Инвалиды')
 				+tabs-content(false, 'two')
 				+tabs-content(false, 'three')
 				+tabs-content(false, 'four')
