@@ -1,33 +1,33 @@
-extends ../layout/head
-include ../templates/header
-include ../components/icon
-include ../components/pagination
-include ../components/breadcrumbs
-include ../components/cards
+extends ../../layout/head
+include ../../templates/header
+include ../../components/icon
+include ../../components/pagination
+include ../../components/breadcrumbs
+include ../../components/cards
 
 block title
 	title Портал Моя работа - Название вебинара/презентации/видеоурока
 
 block links
-	link(rel='stylesheet', href='../css/main.css')
+	link(rel='stylesheet', href='../../css/main.css')
 	// Favicon
-	link(rel='shortcut icon', href='../favicon.ico', type='image/x-icon')
+	link(rel='shortcut icon', href='../../favicon.ico', type='image/x-icon')
 block content
 	body#knowlege-page
-		+header('/')
+		+header('../../')
 		main.knowlege-page.knowlege-page--align
-			+breadcrumbs(['База знаний', 'Название контента'], ['pages/knowlege.html', 'pages/knowlege-page.html'], 'knowlege-page', '../')
+			+breadcrumbs(['База знаний', 'Название контента'], ['pages/knowlege.html', 'pages/knowlege-page.html'], 'knowlege-page', '../../')
 			section.knowlege-page__content
 				.container
 					.knowlege-page__holder
 						h1.knowlege-page__headline Название контента
 						iframe.knowlege-page__iframe(src='https://www.youtube.com/embed/gdJjc6l6iII' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
 						p.knowlege-page__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ut iste, fugiat, voluptatibus sapiente nobis quia accusamus repellendus magnam suscipit distinctio non aliquam odio harum ea quae saepe neque itaque. Minus labore dignissimos id alias, tenetur velit magnam ipsam quasi, architecto iusto sunt excepturi itaque earum accusamus dolorum vel? Expedita modi alias itaque, beatae veniam, quo recusandae facere consequatur, asperiores voluptatem similique eos! At voluptate facilis distinctio adipisci possimus quam a, dolore tempora quod iusto, sequi et. Autem laborum facilis ratione. Porro ipsam laborum tempore quibusdam cupiditate, odit consectetur quisquam? Dignissimos quia temporibus nobis corporis blanditiis cumque dolores eius culpa ab velit rem nulla, sunt inventore repudiandae harum in quos optio nihil. Esse magni fuga, a asperiores eligendi dolor, illum doloremque ad, sapiente laudantium quia illo provident quo odio sed voluptatibus nisi deserunt molestias! Animi suscipit magni a deleniti beatae incidunt laborum placeat ab. Asperiores nostrum possimus iusto? Facere esse tempore sint est quis, ad ducimus. Saepe unde laborum tenetur alias suscipit repudiandae sit labore enim cumque consequatur quaerat rem iusto repellendus officiis inventore sequi, facilis deleniti voluptatibus consequuntur facere. Possimus mollitia magni illo voluptatum. Veniam enim nesciunt quod amet. Minima error harum repudiandae debitis culpa odit eum adipisci voluptatum.
-						+pagination('knowlege-page', '../', true, true, false, false, false)
+						+pagination('knowlege-page', '../../', true, true, false, false, false)
 					aside.sidebar.knowlege-page__sidebar
 						h2.sidebar__headline Это может быть интересно
-						+contentCard('../', 'knowlege-page', 'Видеоурок')
-						+contentCard('../', 'knowlege-page', 'Вебинар')
-						+contentCard('../', 'knowlege-page', 'Презентация')
+						+contentCard('../../', 'knowlege-page', 'Видеоурок')
+						+contentCard('../../', 'knowlege-page', 'Вебинар')
+						+contentCard('../../', 'knowlege-page', 'Презентация')
 						
-		script(src='../js/main.js')
+		script(src='../../js/main.js')
