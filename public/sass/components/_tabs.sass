@@ -76,11 +76,13 @@
         background-color: $palette__background-light
         padding: 1rem 0
         &__item
-            display: grid
+            display: none
             grid-template-columns: 308px
             grid-auto-rows: 164px
             row-gap: 1rem
             justify-content: center
+            &.is-active
+                display: grid
         .container
             margin: 0 auto
 

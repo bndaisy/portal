@@ -14,6 +14,7 @@ block content
 	body#vacancy
 		+header('../../')
 		main.vacancy.vacancy--align
-			+breadcrumbs(['Вакансии', 'Название вакансии'], ['../vacancies.html', 'vacancy.html'], 'vacancy', '../../')
+			+breadcrumbs(['Вакансии', 'Название вакансии'], ['pages/vacancies.html', 'pages/inner/vacancy.html'], 'vacancy', '../../')
+			.vacancy__content
 
 		script(src='../../js/main.js')

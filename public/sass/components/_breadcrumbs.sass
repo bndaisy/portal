@@ -1,7 +1,8 @@
 .news-page,
-.knowlege-page
+.knowlege-page,
+.vacancy
     &__breadcrumbs
-        margin: 1rem 0
+        padding: 1rem 0
         
     .breadcrumbs
         .container
@@ -13,15 +14,28 @@
         &__item
             &:not(:last-of-type)
                 margin-right: 0.5rem
+
+.news-page,
+.knowlege-page
+    .breadcrumbs
         &__link
             +textline($palette__secondary, $headline, none)
+.vacancy
+    &__breadcrumbs
+        background-color: $palette__another-dark
+    .breadcrumbs
+        &__link
+            +textline($palette__background-light, $headline, none)
+
 
 @media all and (min-width: 360px)
     .news-page,
-    .knowlege-page
+    .knowlege-page,
+    .vacancy
         .breadcrumbs
             .container
                 margin: 0 1rem
+                
 @media all and (min-width: 1024px)
     .news-page,
     .knowlege-page
@@ -30,9 +44,17 @@
                 transition: $fast
                 &:hover
                     color: $palette__primary
+    .vacancy
+        .breadcrumbs
+            &__link
+                transition: $fast
+                &:hover
+                    color: darken($palette__background-light, 15%)
+
 @media all and (min-width: 1280px)
     .news-page,
-    .knowlege-page
+    .knowlege-page,
+    .vacancy
         .breadcrumbs
             .container
                 margin: 0 auto
