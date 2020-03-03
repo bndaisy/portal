@@ -1,0 +1,19 @@
+extends ../../layout/head
+include ../../templates/header
+include ../../components/icon
+include ../../components/breadcrumbs
+
+block title
+	title Портал Моя работа - Вакансии
+
+block links
+	link(rel='stylesheet', href='../../css/main.css')
+	// Favicon
+	link(rel='shortcut icon', href='../../favicon.ico', type='image/x-icon')
+block content
+	body#vacancy
+		+header('../../')
+		main.vacancy.vacancy--align
+			+breadcrumbs(['Вакансии', 'Название вакансии'], ['../vacancies.html', 'vacancy.html'], 'vacancy', '../../')
+
+		script(src='../../js/main.js')
