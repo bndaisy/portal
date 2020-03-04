@@ -16,5 +16,32 @@ block content
 		main.vacancy.vacancy--align
 			+breadcrumbs(['Вакансии', 'Название вакансии'], ['pages/vacancies.html', 'pages/inner/vacancy.html'], 'vacancy', '../../')
 			.vacancy__content
+				.container
+					.vacancy__holder
+						+icon('../../', 'invalid')
+						+icon('../../', 'correct')
+						+icon('../../', 'delete')  
+						h2.vacancy__headline Номер вакансии
+						h2.vacancy__headline Статус вакансии
+						h3.vacancy__subheadline Квотируемая категория
+						span.vacancy__value Молодежь
+						h3.vacancy__subheadline Работодатель
+						span.vacancy__value ОАО "Кочки из клубочка"
+						h3.vacancy__subheadline Вакансия
+						span.vacancy__value Повар
+						h3.vacancy__subheadline Специализация
+						span.vacancy__value Выпечка хлебной продукции
+						h3.vacancy__subheadline Образование
+						span.vacancy__value Среднее специальное
+						h3.vacancy__subheadline Стаж по специальности
+						span.vacancy__value 3 года
+						h3.vacancy__subheadline График 
+						span.vacancy__value Сменный
+						h3.vacancy__subheadline Заработная плата
+						span.vacancy__value от 20000
+						h3.vacancy__subheadline Адрес рабочего места
+						span.vacancy__value г. Кочки из клубочка
+						h3.vacancy__subheadline Транспорт
+						span.vacancy__value м. Клубочки
 
 		script(src='../../js/main.js')

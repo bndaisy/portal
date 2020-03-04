@@ -9,3 +9,20 @@
         grid-template-rows: minmax(min-content, max-content) 1fr
     &__content
         background-color: $palette__background-light
+        padding: 2rem 0
+        .container
+            margin: 0 auto
+    &__holder
+        background-color: $palette__background
+        border-radius: $border-radius
+        padding: 2rem
+        position: relative
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr 2fr
+        
+    &__headline
+        &:last-of-type
+            grid-column: span 3
+            
+            
+        
