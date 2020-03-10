@@ -19,10 +19,18 @@
         position: relative
         display: grid
         grid-template-columns: 1fr 2fr 1fr 2fr
+        row-gap: 0.5rem
         
     &__headline
-        &:last-of-type
-            grid-column: span 3
+        +textline($palette__primary, $headline*1.5, uppercase)
+        font-weight: bolder
+        grid-column: span 4
+        margin-bottom: 0.5rem
+    &__subheadline
+        +textline($palette__secondary-darken, $headline, none)
+    &__value
+        +textline($palette__secondary, $headline, none)
+
             
             
         
