@@ -147,6 +147,17 @@
         &--vacancy-correct
             top: 3.25rem
             right: 3.25rem
+.vacancy
+    .btn
+        &--vacancy-correct,
+        &--vacancy-delete
+            position: absolute
+        &--vacancy-delete
+            top: 0.5rem
+            right: 6rem
+        &--vacancy-correct
+            top: 0.5rem
+            right: 9rem
 
 
 @media all and (min-width: 768px)
@@ -234,3 +245,14 @@
                 &:hover
                     .icon
                         fill: $palette__primary-accent
+    .vacancy
+        .btn
+            transition: $fast
+            &:hover
+                cursor: pointer
+            &--vacancy-correct,
+            &--vacancy-delete
+                &:hover
+                    .icon
+                        fill: $palette__primary-accent
+                

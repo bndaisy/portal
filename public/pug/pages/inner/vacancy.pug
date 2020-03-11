@@ -19,11 +19,13 @@ block content
 				.container
 					.vacancy__holder
 						+icon('../../', 'invalid')
-						+icon('../../', 'correct')
-						+icon('../../', 'delete')  
+						button.btn.btn--vacancy-delete
+							+icon('../../', 'delete')
+						button.btn.btn--vacancy-correct  
+							+icon('../../', 'correct')
 						h2.vacancy__headline Номер вакансии
 						h3.vacancy__subheadline Квотируемая категория
-						span.vacancy__value Молодежь
+						span.vacancy__value Люди с ограничениями по состоянию здоровья
 						h3.vacancy__subheadline Образование
 						span.vacancy__value Среднее специальное
 						h3.vacancy__subheadline Работодатель

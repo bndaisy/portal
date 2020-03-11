@@ -174,9 +174,21 @@
 .vacancy
     &__holder
         .icon
-            position: absolute
-            right: 0
-            top: 0
+            &--invalid
+                position: absolute
+                max-width: 3rem
+                max-height: 4rem
+                right: 2rem
+                top: 0
+                fill: $palette__primary-accent
+            &--correct
+                max-width: 2rem
+                max-height: 3rem
+                fill: $palette__secondary
+            &--delete
+                max-width: 2rem
+                max-height: 3rem
+                fill: $palette__secondary
 
 @media all and (min-width: 768px)
     .auth
@@ -254,4 +266,6 @@
                 &:hover
                     cursor: pointer
                     fill: $palette__secondary-accent
+            
+
 
