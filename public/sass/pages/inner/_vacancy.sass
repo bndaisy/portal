@@ -1,48 +1,68 @@
 #vacancy
-    display: grid
-    grid-template-rows: minmax(min-content, max-content) 1fr
-    min-height: 100vh
+	display: grid
+	grid-template-rows: minmax(min-content, max-content) 1fr
+	min-height: 100vh
 
 .vacancy
-    &--align
-        display: grid
-        grid-template-rows: minmax(min-content, max-content) 1fr
-    &__content
-        background-color: $palette__background-light
-        padding: 1rem 0
-        .container
-            margin: 0 0.5rem
-    &__holder
-        background-color: $palette__background
-        border-radius: $border-radius
-        padding: 1rem
-        position: relative
-        display: grid
-        grid-template-columns: 1fr
-        column-gap: 0.5rem
-        row-gap: 0.5rem
-        
-    &__headline
-        +textline($palette__primary, $headline*1.2, uppercase)
-        font-weight: bolder
-        margin-bottom: 0.5rem
-    &__subheadline
-        +textline($palette__secondary-darken, $headline, none)
-    &__value
-        +textline($palette__secondary, $headline, none)
+	&--align
+		display: grid
+		grid-template-rows: minmax(min-content, max-content) 1fr
+	&__content
+		background-color: $palette__background-light
+		padding: 1rem 0
+		.container
+			margin: 0 0.5rem
+	&__holder
+		background-color: $palette__background
+		border-radius: $border-radius
+		padding: 1rem
+		position: relative
+		display: grid
+		grid-template-columns: 1fr
+		column-gap: 0.5rem
+		row-gap: 0.5rem
+		
+	&__headline
+		+textline($palette__primary, $headline*1.2, uppercase)
+		font-weight: bolder
+		margin-bottom: 0.5rem
+		max-width: 180px
+	&__subheadline
+		+textline($palette__secondary-darken, $headline, none)
+	&__value
+		+textline($palette__secondary, $headline, none)
+		
+
+@media all and ( min-width: 360px)
+	.vacancy
+		&__content
+			.container
+				margin: 0 1rem
+				
+@media all and ( min-width: 480px)
+	.vacancy
+		&__holder
+			grid-template-columns: repeat(2, 1fr)
+			padding: 1.5rem
+		&__headline
+			grid-column: span 2
+			max-width: 100%
+
+@media all and ( min-width: 768px)
+	.vacancy
+		&__headline
+			font-size: $headline*1.5
+			grid-column: span 2
+		
 
 @media all and ( min-width: 1024px)
-    .vacancy
-        &__content
-            padding: 2rem 0
-            .container
-                margin: 0 auto
-        &__holder
-            grid-template-columns: 1fr 2fr 1fr 2fr
-            padding: 2rem
-        &__headline
-            grid-column: span 4
+	.vacancy
+		&__content
+			padding: 2rem 0
+			.container
+				margin: 0 auto
 
-            
-            
-        
+
+			
+			
+		
