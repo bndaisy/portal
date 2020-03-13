@@ -42,7 +42,7 @@
 @media all and ( min-width: 480px)
 	.vacancy
 		&__holder
-			grid-template-columns: repeat(2, 1fr)
+			grid-template-columns: 1fr 2fr
 			padding: 1.5rem
 		&__headline
 			grid-column: span 2
@@ -50,9 +50,12 @@
 
 @media all and ( min-width: 768px)
 	.vacancy
+		&__holder
+			grid-template-columns: 1fr 2fr 1fr 2fr
+			padding: 2rem
 		&__headline
 			font-size: $headline*1.5
-			grid-column: span 2
+			grid-column: span 4
 		
 
 @media all and ( min-width: 1024px)
